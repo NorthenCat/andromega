@@ -71,7 +71,7 @@
     </nav>
       
 
-    <div class="min-w-screen px-48 pb-10">
+    <div class="min-w-screen">
         @yield('content')
     </div>
 

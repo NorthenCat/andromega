@@ -15,6 +15,9 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage:{
+                'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+            }
         },
     },
     plugins: [require("flowbite/plugin")],
