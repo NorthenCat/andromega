@@ -6,55 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Page</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body class="bg-gray-100">
 
-    <nav id="navbar" class="bg-black fixed w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 rounded-full">
-        <div class="w-full flex flex-wrap items-center justify-between px-10 py-4">
+    <nav id="navbar" class="bg-[#262262] fixed w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 xl:rounded-full rounded-2xl">
+        <div class="w-full flex flex-wrap items-center justify-between px-5 py-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="md:h-10 h-20" alt="Website Logo">
+                <img src={{ asset('storage/logo_andromega_putih.png') }} class="md:h-8 h-9 mx-4" alt="Website Logo">
             </a>
-            <div class="flex ml-auto md:ml-0 xl:order-2 space-x-3 xl:space-x-0 rtl:space-x-reverse">
-                <a target="_blank" href="#"
-                    class="hidden xl:flex md:text-black md:bg-[#FFDD02] md:hover:bg-yellow-300 md:focus:ring-4 md:focus:outline-none md:rounded-full md:mx-auto md:font-extrabold md:px-4 md:py-3 md:text-center">
-                    Contact Us
-                </a>
-                <button data-collapse-toggle="navbar-sticky" type="button" onclick="toggleMenu()"
-                    class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#FFDD02] hover:text-white rounded-lg xl:hidden hover:bg-[#FFDD02] focus:outline-none focus:ring-2 focus:ring-gray-200 focus:text-white"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1" id="navbar-sticky">
+            <button data-collapse-toggle="navbar-sticky" type="button" onclick="toggleMenu()"
+                class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white hover:text-white rounded-lg xl:hidden hover:bg-[#f05426] focus:outline-none focus:ring-2 focus:ring-gray-200 focus:text-white"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="items-center justify-center hidden w-full xl:flex xl:w-auto xl:order-1" id="navbar-sticky">
+                <div class="flex ml-auto md:ml-5 xl:order-2 space-x-3 xl:space-x-0 rtl:space-x-reverse">
+                    <a target="_blank" href="#"
+                        class="hidden xl:flex md:text-white md:bg-[#f05426] md:hover:bg-[#e04b28] md:focus:ring-4 md:focus:outline-none md:rounded-full md:mx-auto md:font-normal md:px-6 md:py-3 md:text-center">
+                        Contact Us
+                    </a>
+                </div>
                 <ul
-                    class="flex flex-col p-4 xl:p-1 mt-4 font-medium border text-white xl:border-none xl:rounded-none xl:bg-transparent rounded-lg xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0">
+                    class="flex flex-col p-4 xl:p-1 mt-4 text-lg font-normal border text-white xl:border-none xl:rounded-none xl:bg-transparent rounded-lg xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0">
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-xl lg:hover:font-bold lg:p-1 lg:hover:underline {{ request()->is('/') ? 'font-bold underline' : '' }}">
-                            ABOUT
+                            class="block py-2 px-3 lg:hover:font-bold lg:p-1  {{ request()->is('/') ? 'font-bold ' : '' }}">
+                            Home
                         </a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-xl lg:hover:font-bold lg:p-1 lg:hover:underline {{ request()->is('tour') || request()->is('tour/*') ? 'font-bold underline' : '' }}">
-                            TOUR
+                            class="block py-2 px-3 lg:hover:font-bold lg:p-1  {{ request()->is('tour') || request()->is('tour/*') ? 'font-bold ' : '' }}">
+                        Paket Layanan
                         </a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-xl lg:hover:font-bold lg:p-1 lg:hover:underline">
-                            CONTACT
+                            class="block py-2 px-3 lg:hover:font-bold lg:p-1">
+                            Service & Solution
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 lg:hover:font-bold lg:p-1">
+                            FAQs
                         </a>
                     </li>
                     <button type="button"
-                        class="xl:hidden mt-10 text-black bg-[#FFDD02] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
-                        SEND YOUR INQUIRTY
+                        class="xl:hidden mt-10 text-white bg-[#f05426] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
+                        Contact Us
                     </button>
                 </ul>
             </div>
@@ -62,7 +71,7 @@
     </nav>
       
 
-    <div class="min-w-screen px-10">
+    <div class="min-w-screen px-48 pb-10">
         @yield('content')
     </div>
 
