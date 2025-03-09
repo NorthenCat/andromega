@@ -64,6 +64,9 @@
             </div>
         </div>
     </div>
+    <div class="flex justify-center py-10 text-center">
+        <h1 class="font-light text-white">Copyright © 2023 PT. Andromega Data Nusantara. All Rights Reserved.</h1>
+    </div>
 </div>
 
 @endsection

@@ -88,7 +88,7 @@
                    <button type="button" class="md:w-auto">
                        <div class="bg-[#f05426] text-white rounded-full md:text-lg text-normal font-normal pr-2 text-center flex items-center justify-center md:justify-start">
                            <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
-                               <a href="#" class="block w-full lg:p-1">
+                               <a href="{{ route('paket') }}" class="block w-full lg:p-1">
                                    Cek paket lainnya
                                </a>
                            </div>

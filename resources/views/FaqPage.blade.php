@@ -20,7 +20,7 @@
                 @click="open = !open">
                <div class="flex justify-between items-center">
                    <p class="font-semibold italic">Bagaimana Andromega memastikan kualitas layanan yang diberikan?</p>
-                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-orange-500': !open }" class="text-2xl"></span>
+                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-[#f05426]': !open }" class="text-5xl font-medium"></span>
                </div>
                <div x-show="open" class="mt-2 text-sm">Isi jawaban disini</div>
             </div>
@@ -32,7 +32,7 @@
                 @click="open = !open">
                <div class="flex justify-between items-center">
                    <p class="font-semibold italic">Bagaimana Andromega memastikan kualitas layanan yang diberikan?</p>
-                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-orange-500': !open }" class="text-xl"></span>
+                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-[#f05426]': !open }" class="text-5xl font-medium"></span>
                </div>
                <div x-show="open" class="mt-2 text-sm">Isi jawaban disini</div>
             </div>
@@ -44,12 +44,22 @@
                 @click="open = !open">
                <div class="flex justify-between items-center">
                    <p class="font-semibold italic">Bagaimana Andromega memastikan kualitas layanan yang diberikan?</p>
-                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-orange-500': !open }" class="text-xl"></span>
+                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-[#f05426]': !open }" class="text-5xl font-medium"></span>
                </div>
                <div x-show="open" class="mt-2 text-sm">Isi jawaban disini</div>
             </div>
-
-            
+            <div class="w-full max-w-6xl space-y-4">
+                <div x-data="{ open: false }" class="rounded-lg p-4 cursor-pointer transition-colors duration-300" 
+                :class="{ 'bg-gradient-radial from-[#80439a] to-[#2c3177] text-white': open,
+                'bg-gradient-radial from-[#80439a80] to-[#2c317780]': !open 
+                }" 
+                @click="open = !open">
+               <div class="flex justify-between items-center">
+                   <p class="font-semibold italic">Bagaimana Andromega memastikan kualitas layanan yang diberikan?</p>
+                   <span x-text="open ? '-' : '+'" :class="{ 'text-white': open, 'text-[#f05426]': !open }" class="text-5xl font-medium"></span>
+               </div>
+               <div x-show="open" class="mt-2 text-sm">Isi jawaban disini</div>
+            </div>
         </div>
     </div>
     </div>
