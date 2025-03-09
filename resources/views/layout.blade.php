@@ -62,9 +62,10 @@
                             FAQs
                         </a>
                     </li>
-                    <button type="button"
-                        class="xl:hidden mt-10 text-white bg-[#f05426] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
-                        Contact Us
+                    <button type="button" class="xl:hidden mt-10 text-white bg-[#f05426] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
+                        <a href="{{ route('contact') }}">
+                            Contact Us
+                        </a>
                     </button>
                 </ul>
             </div>
