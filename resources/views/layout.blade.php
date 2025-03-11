@@ -12,12 +12,15 @@
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-poppins">
 
-    <nav id="navbar" class="{{ request()->is('contact') || request()->is('paket') ? 'bg-white' : 'bg-[#262262]' }}  absolute w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 xl:rounded-full rounded-2xl">
+    <nav id="navbar"
+        class="{{ request()->is('contact') || request()->is('paket') ? 'bg-white' : 'bg-[#262262]' }}  absolute w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 xl:rounded-full rounded-2xl">
         <div class="w-full flex flex-wrap items-center justify-between px-5 py-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src={{ asset(request()->is('contact') || request()->is('paket') ? 'storage/logo_andromega_hitam.png' : 'storage/logo_andromega_putih.png') }} class="md:h-8 h-9 mx-4" alt="Website Logo">
+                <img src={{ asset(request()->is('contact') || request()->is('paket') ?
+                'storage/logo_andromega_hitam.png' : 'storage/logo_andromega_putih.png') }} class="md:h-8 h-9 mx-4"
+                alt="Website Logo">
             </a>
             <button data-collapse-toggle="navbar-sticky" type="button" onclick="toggleMenu()"
                 class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm {{ request()->is('contact') || request()->is('paket') ? 'text-[#f05426]' : 'text-white' }} hover:text-white rounded-lg xl:hidden hover:bg-[#f05426] focus:outline-none focus:ring-2 focus:ring-gray-200 focus:text-white"
@@ -47,12 +50,11 @@
                     <li>
                         <a href="{{ route('paket') }}"
                             class="block py-2 px-3 lg:hover:font-bold lg:p-1  {{ request()->is('paket') || request()->is('paket/*') ? 'font-bold ' : '' }}">
-                        Paket Layanan
+                            Paket Layanan
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 lg:hover:font-bold lg:p-1 ">
+                        <a href="#" class="block py-2 px-3 lg:hover:font-bold lg:p-1 ">
                             Service & Solution
                         </a>
                     </li>
@@ -62,7 +64,8 @@
                             FAQs
                         </a>
                     </li>
-                    <button type="button" class="xl:hidden mt-10 text-white bg-[#f05426] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
+                    <button type="button"
+                        class="xl:hidden mt-10 text-white bg-[#f05426] focus:ring-4 focus:outline-none rounded-full text-lg font-bold px-4 py-2 text-center">
                         <a href="{{ route('contact') }}">
                             Contact Us
                         </a>
@@ -71,7 +74,7 @@
             </div>
         </div>
     </nav>
-      
+
 
     <div class="min-w-screen">
         @yield('content')

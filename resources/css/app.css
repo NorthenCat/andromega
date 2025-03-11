@@ -93,42 +93,61 @@
 
 .swiper-pagination {
     position: absolute !important;
-    bottom: 0px !important;
-    left: 0 !important;
-    width: 100% !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 8px !important;
-    z-index: 10 !important;
 }
 
-/* .swiper-pagination-bullet {
-  width: 20px !important;
-  height: 20px !important;
-  background: #ccc !important;
-  opacity: 1 !important;
-  margin: 0 8px !important;
-  clip-path: polygon(5% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 5% 75%) !important;
-  transform: rotate(0deg) !important;
-  transition: 0.3s  !important;
-  rounded: 0;
-} */
-
+/* Make ALL bullets hexagons */
 .swiper-pagination-bullet {
-    width: 20px !important;
-    height: 22px !important;
+    width: 12px !important;
+    height: 14px !important;
     background: #ccc !important;
-    opacity: 1 !important;
-    margin: 0 8px !important;
+    opacity: 0.5 !important;
+    margin: 0 4px !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
-    transform: rotate(0deg) !important;
-    transition: 0.3s !important;
     border-radius: 0 !important;
-    /* "rounded" is not valid CSS, should be border-radius */
+    /* Remove border-radius completely */
+    transition: all 0.3s ease !important;
+    transform: scale(0.8) !important;
 }
 
+/* Active bullet - larger and different color */
 .swiper-pagination-bullet-active {
+    width: 16px !important;
+    height: 18px !important;
     background: #262262 !important;
-    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+/* Dynamic bullets styling - keep hexagon shape but with different sizes/opacity */
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+    background: #8681a0 !important;
+    opacity: 0.8 !important;
+    transform: scale(0.85) !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+}
+
+.swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination-bullet-active-next-next {
+    background: #c3c1d0 !important;
+    opacity: 0.6 !important;
+    transform: scale(0.7) !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+}
+
+/* Fix for transition states - ensure clip-path is always maintained */
+.swiper-pagination-bullet.swiper-pagination-bullet-active-main,
+.swiper-pagination-bullet.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet.swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination-bullet.swiper-pagination-bullet-active-next-next {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
 }

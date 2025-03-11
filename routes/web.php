@@ -41,10 +41,16 @@ Route::get('/', function () {
 })->name('home');
 Route::get('/faq', function () {
     return view('FaqPage');
-})->name('faq');;
+})->name('faq');
+;
 Route::get('/paket', function () {
     return view('PaketLayananPage');
 })->name('paket');
 Route::get('/contact', function () {
     return view('ContactUsPage');
 })->name('contact');
+
+// Fallback
+Route::fallback(function () {
+    return response()->json(['message' => 'Not Found'], 404);
+});
