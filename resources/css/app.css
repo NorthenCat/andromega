@@ -151,3 +151,17 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active-next-next {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
 }
+
+.layananSwiper {
+    padding: 0 20px !important;
+}
+
+.layananSwiper .swiper-slide {
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.layananSwiper .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}

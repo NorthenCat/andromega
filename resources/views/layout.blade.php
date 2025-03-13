@@ -15,7 +15,7 @@
 <body class="bg-gray-100 font-poppins">
 
     <nav id="navbar"
-        class="{{ request()->is('contact') || request()->is('paket') ? 'bg-white' : 'bg-[#262262]' }}  absolute w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 xl:rounded-full rounded-2xl">
+        class="{{ request()->is('contact') || request()->is('paket') ? 'bg-white' : 'bg-[#262262]' }}  fixed w-11/12 z-20 left-1/2 -translate-x-1/2 top-7 border-gray-200 xl:rounded-full rounded-2xl">
         <div class="w-full flex flex-wrap items-center justify-between px-5 py-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src={{ asset(request()->is('contact') || request()->is('paket') ?
@@ -77,7 +77,7 @@
     </nav>
 
 
-    <div class="min-w-screen">
+    <div class="min-w-screen flex-grow">
         @yield('content')
     </div>
 

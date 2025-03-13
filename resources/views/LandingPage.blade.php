@@ -110,7 +110,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
     <div class="container mx-auto">
         <div class="flex flex-col justify-center">
             {{-- Header Section --}}
-            <div class="w-full flex flex-col md:flex-row md:justify-between items-center py-6 md:py-12">
+            <div class="w-full flex flex-col md:flex-row md:justify-between items-center px-5 py-6 md:py-12">
                 <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                     Harga <span class="font-bold italic">Paket</span>
                 </h1>
@@ -144,7 +144,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
                 <!-- Card 1 -->
                 <div
-                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-indigo-900 to-purple-700">
+                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
                         style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
@@ -243,7 +243,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 
                 <!-- Card 2 -->
                 <div
-                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-indigo-900 to-purple-700">
+                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
                         style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
@@ -364,7 +364,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 
                 <!-- Card 3 -->
                 <div
-                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-indigo-900 to-purple-700 md:col-span-full xl:col-span-1">
+                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
                         style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
@@ -555,14 +555,14 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 
         {{-- Card Section --}}
         <div class="relative pb-30">
-            <div class="swiper layananSwiper">
+            <div class="swiper layananSwiper mx-auto">
                 <div class="swiper-wrapper mb-32">
                     {{-- CONTENT --}}
                     @foreach ($layananData as $data)
-                    <div class="swiper-slide h-full">
-                        <div>
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-full md:w-auto">
                             {{-- BASE CARD --}}
-                            <div class="shadow-xl w-full min-h-[510px] max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-[#2c3177] to-[#80439a] p-4 flex flex-col cursor-pointer transition-all ease-in-out duration-300 place-items-stretch"
+                            <div class="shadow-xl w-full min-h-[510px] max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] p-4 flex flex-col cursor-pointer transition-all ease-in-out duration-300 place-items-stretch"
                                 onclick="showContent(this)" id="baseCard{{ $data['id'] }}">
                                 <!-- Icon Section -->
                                 <div class="flex-grow flex items-center justify-center py-12">
@@ -594,7 +594,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                                 </div>
                             </div>
                             {{-- content --}}
-                            <div class="max-w-sm min-h-[510px] p-6 bg-gradient-to-b from-[#2c3177] to-[#80439a] text-white rounded-3xl shadow-lg hidden cursor-pointer transition-all ease-in-out duration-300"
+                            <div class="max-w-sm min-h-[510px] p-6 bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] text-white rounded-3xl shadow-lg hidden cursor-pointer transition-all ease-in-out duration-300"
                                 onclick="showContent(this)" id="detailedContent{{$data['id']}}">
                                 <div class="flex items-center justify-between mb-4">
                                     <h2 class="text-lg font-semibold">{{$data['title']}}</h2>

@@ -26,11 +26,11 @@ window.toggleMenu = function () {
     navbarMenu.classList.toggle("hidden");
 };
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".layananSwiper", {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: "auto",
-        spaceBetween: 30,
         centeredSlides: true,
         loop: true,
         autoplay: {
@@ -43,23 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
             type: "bullets",
             dynamicBullets: true,
             dynamicMainBullets: 1,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            },
         },
         breakpoints: {
-            640: {
+            320: {
                 slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 1.5,
+                spaceBetween: -30,
             },
             768: {
                 slidesPerView: 2,
+                spaceBetween: 20,
             },
             1024: {
-                slidesPerView: 2,
+                slidesPerView: 2.5,
+                spaceBetween: 10,
             },
-            1440: {
+            1440:{
                 slidesPerView: 3,
-            },
+                spaceBetween: -25,
+            }
         },
     });
 });
