@@ -19,7 +19,8 @@
         <div class="w-full flex flex-wrap items-center justify-between px-5 py-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src={{ asset(request()->is('contact') || request()->is('paket') ?
-                'storage/logo_andromega_hitam.png' : 'storage/logo_andromega_putih.png') }} class="md:h-8 h-9 mx-4"
+                'storage/assets/logo_andromega_hitam.png' : 'storage/assets/logo_andromega_putih.png') }} class="md:h-8
+                h-9 mx-4"
                 alt="Website Logo">
             </a>
             <button data-collapse-toggle="navbar-sticky" type="button" onclick="toggleMenu()"
@@ -79,6 +80,11 @@
     <div class="min-w-screen">
         @yield('content')
     </div>
+
+    {{-- Footer --}}
+    <footer class="bg-[#262262] text-white p-4 text-center">
+        <p class="text-xs sm:text-base">Copyright © 2023 PT. Andromega Data Nusantara. All Rights Reserved.</p>
+    </footer>
 
     <!-- Flowbite JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
