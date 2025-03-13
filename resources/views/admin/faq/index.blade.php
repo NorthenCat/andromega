@@ -9,7 +9,7 @@
         <div class="items-center justify-between flex flex-col gap-4">
             <div class="flex justify-between items-center w-full">
                 <div class="flex flex-col justify-center">
-                    <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Daftar Layanan</h3>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Daftar FAQ</h3>
                 </div>
             </div>
         </div>
@@ -17,13 +17,13 @@
     <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800 space-y-4"
         id="section-1">
         <div class="items-start justify-start flex flex-col gap-4">
-            <h3 class="text-base md:text-lg font-bold text-gray-900 dark:text-white">Data Layanan
+            <h3 class="text-base md:text-lg font-bold text-gray-900 dark:text-white">Data Pertanyaan
             </h3>
             <hr class="w-full" />
             <!-- Table -->
             <div class="flex flex-col space-y-4 w-full">
                 <div class="flex flex-row gap-4">
-                    <a href="{{ route('admin.layanan.index') }}"
+                    <a href="{{ route('admin.faq.index') }}"
                         class="inline-flex items-center px-3 py-2.5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                         <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" fill="none" viewBox="0 0 24 24">
@@ -37,10 +37,10 @@
                         <span>Pencarian</span>
                     </button>
                     <div class="flex justify-start">
-                        <button data-modal-target="layanan-modal" data-modal-toggle="layanan-modal" onclick="addModal()"
+                        <button data-modal-target="faq-modal" data-modal-toggle="faq-modal" onclick="addModal()"
                             class="inline-flex items-center px-3 py-2.5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 gap-2">
                             <i class="fa-solid fa-plus fa-lg" type="button"></i>
-                            <span>Tambah Layanan</span>
+                            <span>Tambah FAQ</span>
                         </button>
                     </div>
                 </div>
@@ -56,11 +56,7 @@
                                         </th>
                                         <th scope="col"
                                             class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                            Photo/Icon
-                                        </th>
-                                        <th scope="col"
-                                            class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                            Nama Layanan
+                                            Question
                                         </th>
                                         <th scope="col"
                                             class="p-4 text-xs text-center font-medium tracking-wider text-gray-500 uppercase dark:text-white">
@@ -82,16 +78,12 @@
                                         <td class="p-4 text-sm text-gray-500 dark:text-white">
                                             {{ $loop->iteration }}</td>
                                         <td class="p-4 text-sm text-gray-500 dark:text-white text-nowrap">
-                                            <img class="w-24 h-24 object-cover rounded-lg"
-                                                src="{{ asset('storage/'.$data->icon) }}" alt="icon">
-                                        </td>
-                                        <td class="p-4 text-sm text-gray-500 dark:text-white text-nowrap">
-                                            {{$data->nama}}
+                                            {{$data->question}}
                                         </td>
                                         <td class="p-4 text-sm text-gray-500 dark:text-white h-full">
                                             <div class="flex items-center justify-center h-full">
-                                                <button data-modal-target="layanan-modal"
-                                                    data-modal-toggle="layanan-modal" onclick="editModal({{$data}})"
+                                                <button data-modal-target="faq-modal" data-modal-toggle="faq-modal"
+                                                    onclick="editModal({{$data}})"
                                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                     <svg class="w-6 h-6 mr-2 text-white" aria-hidden="true"
                                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -122,7 +114,7 @@
     </div>
 </main>
 
-<div id="layanan-modal" tabindex="-1" aria-hidden="true"
+<div id="faq-modal" tabindex="-1" aria-hidden="true"
     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-lg max-h-full">
         <!-- Modal content -->
@@ -130,11 +122,11 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                 <h3 id="modalTitle" class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Tambah Layanan
+                    Tambah FAQ
                 </h3>
                 <button type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                    data-modal-toggle="layanan-modal">
+                    data-modal-toggle="faq-modal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -144,34 +136,21 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form id="layananForm" method="POST" enctype="multipart/form-data" class="p-4 md:p-5">
+            <form id="faqForm" method="POST" enctype="multipart/form-data" class="p-4 md:p-5">
                 @csrf
-                <input type="hidden" id="layanan_id" name="layanan_id">
+                <input type="hidden" id="faq_id" name="faq_id">
                 <div class="grid sm:grid-cols-2 gap-4 mb-4 grid-cols-2">
-                    {{-- upload icon atau gambar --}}
                     <div class="col-span-full flex flex-col justify-between">
-                        {{-- show image if on mode edit --}}
-                        <img id="iconImage" class="w-full object-cover rounded-lg mb-2" src="" alt="icon image">
-                        <label for="icon"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Icon</label>
-                        <input type="file" name="image" id="icon" accept="image/*"
-                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                            required="">
-                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PNG, JPG, SVG
-                            (MIN. 100x100px).</p>
-                    </div>
-                    <div class="col-span-full flex flex-col justify-between">
-                        <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
-                            Layanan</label>
-                        <input type="text" name="nama" id="nama"
+                        <label for="question"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Question</label>
+                        <input type="text" name="question" id="question"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="cth. Layanan ISP: Solusi Teknologi Informasi yang Bermutu dan Berintegritas"
-                            required="">
+                            placeholder="cth. Bagaimana cara mengatasi masalah jaringan?" required="">
                     </div>
                     <div class="col-span-full flex flex-col justify-between">
-                        <label for="deskripsi"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi</label>
-                        <textarea name="deskripsi" id="deskripsi"
+                        <label for="answer"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Answer</label>
+                        <textarea name="answer" id="answer"
                             class="ck-content bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             rows="4"></textarea>
                     </div>
@@ -225,14 +204,14 @@
             </div>
             <!-- Modal body -->
             <div class="p-4 md:p-5">
-                <form action="{{route('admin.layanan.index')}}" class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    {{-- Nama Layanan --}}
-                    <div>
-                        <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
-                            Layanan</label>
-                        <input id="nama" type="text"
+                <form action="{{route('admin.faq.index')}}" class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    {{-- Nama FAQ --}}
+                    <div class="col-span-full">
+                        <label for="question" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul
+                            Pertanyaan</label>
+                        <input id="question" type="text"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            name="nama" placeholder="e.g. Layanan ISP">
+                            name="question" placeholder="e.g. Cara mengatasi masalah jaringan" value="">
                     </div>
 
                     <div class="col-span-full">
@@ -296,11 +275,12 @@
 </div>
 
 @push('scripts')
+
 <script>
     let editor;
     // CKEditor 5 initialization
     ClassicEditor
-        .create(document.querySelector('#deskripsi'), {
+        .create(document.querySelector('#answer'), {
             toolbar: ['bold', 'italic','numberedList', 'bulletedList'],
             removePlugins: ['CKFinderUploadAdapter', 'CKFinder', 'EasyImage', 'Image', 'ImageCaption', 'ImageStyle', 'ImageToolbar', 'ImageUpload', 'MediaEmbed']
         })
@@ -312,33 +292,30 @@
             console.error(error);
         });
 
-    function editModal(layanan) {
-        $('#layanan-modal #modalTitle').text('Edit Layanan');
-        $('#layananForm #layanan_id').val(layanan.id);
-        $('#layananForm #nama').val(layanan.nama);
-        editor.setData(layanan.deskripsi);
-        $('#iconImage').attr('src', '{{ asset("storage/") }}/' + layanan.icon).show();
-        $('#layanan-modal').removeClass('hidden');
-        $('#layananForm').attr('data-mode', 'edit');
-        $('#layananForm #deleteButton').show();
-        $('#layananForm #deleteButton').attr('onclick', `deleteModal('layanan', ${layanan.id})`);
+    function editModal(faq) {
+        $('#faq-modal #modalTitle').text('Edit FAQ');
+        $('#faqForm #faq_id').val(faq.id);
+        $('#faqForm #question').val(faq.question);
+        editor.setData(faq.answer);
+        $('#faq-modal').removeClass('hidden');
+        $('#faqForm').attr('data-mode', 'edit');
+        $('#faqForm #deleteButton').show();
+        $('#faqForm #deleteButton').attr('onclick', `deleteModal('faq', ${faq.id})`);
     }
 
     function addModal() {
-        $('#layanan-modal #modalTitle').text('Tambah Layanan');
-        $('#layananForm')[0].reset();
-        $('#layananForm #layanan_id').val('');
+        $('#faq-modal #modalTitle').text('Tambah FAQ');
+        $('#faqForm')[0].reset();
+        $('#faqForm #faq_id').val('');
         editor.setData('');
-        // hide icon
-        $('#iconImage').attr('src', '').hide();
-        $('#layanan-modal').removeClass('hidden');
-        $('#layananForm').attr('data-mode', 'add');
-        $('#layananForm #deleteButton').hide();
-        $('#layananForm #deleteButton').attr('onclick', '');
+        $('#faq-modal').removeClass('hidden');
+        $('#faqForm').attr('data-mode', 'add');
+        $('#faqForm #deleteButton').hide();
+        $('#faqForm #deleteButton').attr('onclick', '');
     }
 
     $(document).ready(function() {
-        $('#layananForm').on('submit', function(e) {
+        $('#faqForm').on('submit', function(e) {
             e.preventDefault();
             const form = $(this);
             const mode = form.attr('data-mode');
@@ -354,11 +331,11 @@
 
             var formData = new FormData(this);
             // Add CKEditor content to form data
-            formData.append('deskripsi', editor.getData());
+            formData.append('answer', editor.getData());
 
             const url = mode === 'edit'
-                ? `{{route('admin.layanan.update')}}`
-                : `{{route('admin.layanan.store')}}`;
+                ? `{{route('admin.faq.update')}}`
+                : `{{route('admin.faq.store')}}`;
 
             if (mode === 'edit') {
                 formData.append('_method', 'PUT');
@@ -430,8 +407,8 @@
 
             let url = '';
             switch(type) {
-                case 'layanan':
-                    url = "{{ route('admin.layanan.delete', ':id') }}".replace(':id', id);
+                case 'faq':
+                    url = "{{ route('admin.faq.delete', ':id') }}".replace(':id', id);
                     break;
             }
 

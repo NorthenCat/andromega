@@ -39,9 +39,9 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 placeholder="john.doe@example.org" value="{{$user->email}}" required="">
                         </div>
-                        <div>
+                        <div class="flex flex-col justify-between">
                             <label for="password"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Change
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white my-auto">Change
                                 Password</label>
                             <input type="password" name="password" id="password" x-model="password"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -74,10 +74,10 @@
                         </svg>
                         <span>Back</span>
                     </a>
-                    <button type="submit" :disabled="password.length > 0 && password !== password_confirmation"
-                        onclick="return confirm('Apakah anda yakin ingin menyimpan perubahan ini?')"
+
+                    <button :disabled="password.length > 0 && password !== password_confirmation"
                         class="inline-flex items-center justify-between px-5 py-2.5 text-sm font-medium text-blue-700 bg-blue-100 border border-blue-200 rounded-md dark:text-blue-200 dark:bg-blue-700 dark:border-blue-700 hover:bg-blue-200 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Simpan Perubahan
+                        <span>Simpan Perubahan</span>
                     </button>
                 </div>
             </form>

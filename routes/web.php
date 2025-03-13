@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\admin\LayananController;
 use App\Http\Controllers\admin\PaketController;
+use App\Http\Controllers\admin\SettingWebController;
 use App\Http\Controllers\auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,16 @@ Route::middleware('auth')->name('admin.')->group(function () {
     Route::put('admin/layanan', [LayananController::class, 'update'])->name('layanan.update');
     Route::delete('admin/layanan/{id}', [LayananController::class, 'destroy'])->name('layanan.delete');
 
+    //FAQ
+    Route::get('admin/faq', [FaqController::class, 'index'])->name('faq.index');
+    Route::post('admin/faq', [FaqController::class, 'store'])->name('faq.store');
+    Route::put('admin/faq', [FaqController::class, 'update'])->name('faq.update');
+    Route::delete('admin/faq/{id}', [FaqController::class, 'destroy'])->name('faq.delete');
+
+    //Setting Web
+    Route::get('admin/setting-web', [SettingWebController::class, 'index'])->name('setting-web.index');
+    Route::put('admin/setting-web', [SettingWebController::class, 'store'])->name('setting-web.update');
+
     // Profile n Logout
     Route::get('/auth/profile', [AuthController::class, 'profile'])->name('profile');
     Route::get('/auth/profile/edit', [AuthController::class, 'profileEdit'])->name('profile.edit');
@@ -52,5 +64,5 @@ Route::get('/contact', function () {
 
 // Fallback
 Route::fallback(function () {
-    return response()->json(['message' => 'Not Found'], 404);
+    return redirect()->route('home');
 });

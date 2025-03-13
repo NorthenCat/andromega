@@ -181,7 +181,7 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.paket-internet.index')}}"
-                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/bloklist') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
+                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/paket-internet') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
                                     <div
                                         class="w-6 h-6 text-center text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                         <i class="fa-solid fa-wifi fa-lg"></i>
@@ -191,12 +191,22 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.layanan.index')}}"
-                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/bloklist') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
+                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/layanan') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
                                     <div
                                         class="w-6 h-6 text-center text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                         <i class="fa-solid fa-server fa-lg"></i>
                                     </div>
                                     <span class="ml-3" sidebar-toggle-item>Layanan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin.faq.index')}}"
+                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/faq') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
+                                    <div
+                                        class="w-6 h-6 text-center text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                                        <i class="fa-solid fa-circle-question fa-lg"></i>
+                                    </div>
+                                    <span class="ml-3" sidebar-toggle-item>FAQ</span>
                                 </a>
                             </li>
                             {{-- <li>
