@@ -4,7 +4,7 @@
     style="background-image: url('{{ asset('storage/assets/bg_putih_1-8.png') }}');">
     <div class="justify-center lg:pt-40 pt-28 relative z-10">
         {{-- HEADER --}}
-        <div class="flex justify-center mx-10">
+        <div data-aos="zoom-in" class="flex justify-center mx-10">
             <div class="text-center">
                 <h1 class="lg:text-5xl text-3xl font-normal text-[#80439a] my-10">FAQ~</h1>
                 <p class="text-black text-3xl">
@@ -12,8 +12,9 @@
                 </p>
             </div>
         </div>
-
-        <div class="flex justify-center pt-10">
+        
+        {{-- SEARCH BAR --}}
+        <div data-aos="fade-in" class="flex justify-center pt-10">
             <div class="w-full max-w-6xl mx-auto">
                 <form method="GET" class="relative">
                     <input type="text" name="search" value="" placeholder="Search your question here"
@@ -36,7 +37,7 @@
         </div>
 
         {{-- QUESTION --}}
-        <div class="flex justify-center pt-10 gap-5">
+        <div data-aos="fade-up" class="flex justify-center pt-10 gap-5">
             <div class="w-full max-w-6xl space-y-4">
                 <div x-data="{ open: false }" class="rounded-lg p-4 cursor-pointer transition-colors duration-300"
                     :class="{ 'bg-gradient-radial from-[#80439a] to-[#2c3177] text-white': open,

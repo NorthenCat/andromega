@@ -4,58 +4,58 @@
 {{-- DUMMY DATA --}}
 @php
 $layananData = [
-[
-'id' => 1,
-'icon' => 'icon_layanan_isp.png',
-'title' => 'Layanan ISP',
-'description' => 'Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk menyediakan solusi Teknologi
-Informasi yang objektif dan tidak memihak kepada pelanggan kami. Kami menyadari bahwa keberhasilan bisnis pelanggan
-tergantung pada keandalan dan kinerja sistem TI mereka.'
-],
-[
-'id' => 2,
-'icon' => 'icon_infrastuktur_jaringan.png',
-'title' => 'Infrastruktur Modern untuk Bisnis Anda',
-'description' => 'Kami menawarkan layanan komprehensif untuk merancang, membangun, dan mengelola infrastruktur jaringan
-organisasi Anda dengan teliti, yang akan memberikan dampak positif pada setiap aspek bisnis Anda. Dengan pendekatan yang
-cermat dan berorientasi pada kebutuhan unik Anda, kami memastikan bahwa infrastruktur jaringan yang kami implementasikan
-tidak hanya andal dan efisien, tetapi juga didesain untuk mendukung pertumbuhan dan inovasi bisnis Anda secara
-berkelanjutan.'
-],
-[
-'id' => 3,
-'icon' => 'icon_pengembangan_perangkat_lunak.png',
-'title' => 'Pengembangan Perangkat Lunak',
-'description' => 'Layanan cloud kami memungkinkan Anda untuk menjalankan bisnis dengan lebih efisien dan fleksibel.
-Akses data dan aplikasi dari mana saja, kapan saja.'
-],
-[
-'id' => 4,
-'icon' => 'icon_video_penjelasan.png',
-'title' => 'Video Penjelasan',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
-[
-'id' => 5,
-'icon' => 'icon_design_grafis_uiux.png',
-'title' => 'Desain Grafis & UI/UX',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
-[
-'id' => 6,
-'icon' => 'icon_pengembangan_website.png',
-'title' => 'Pengembangan Website',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
+    [
+    'id' => 1,
+    'icon' => 'icon_layanan_isp.png',
+    'title' => 'Layanan ISP',
+    'description' => 'Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk menyediakan solusi Teknologi
+    Informasi yang objektif dan tidak memihak kepada pelanggan kami. Kami menyadari bahwa keberhasilan bisnis pelanggan
+    tergantung pada keandalan dan kinerja sistem TI mereka.'
+    ],
+    [
+    'id' => 2,
+    'icon' => 'icon_infrastuktur_jaringan.png',
+    'title' => 'Infrastruktur Modern untuk Bisnis Anda',
+    'description' => 'Kami menawarkan layanan komprehensif untuk merancang, membangun, dan mengelola infrastruktur jaringan
+    organisasi Anda dengan teliti, yang akan memberikan dampak positif pada setiap aspek bisnis Anda. Dengan pendekatan yang
+    cermat dan berorientasi pada kebutuhan unik Anda, kami memastikan bahwa infrastruktur jaringan yang kami implementasikan
+    tidak hanya andal dan efisien, tetapi juga didesain untuk mendukung pertumbuhan dan inovasi bisnis Anda secara
+    berkelanjutan.'
+    ],
+    [
+    'id' => 3,
+    'icon' => 'icon_pengembangan_perangkat_lunak.png',
+    'title' => 'Pengembangan Perangkat Lunak',
+    'description' => 'Layanan cloud kami memungkinkan Anda untuk menjalankan bisnis dengan lebih efisien dan fleksibel.
+    Akses data dan aplikasi dari mana saja, kapan saja.'
+    ],
+    [
+    'id' => 4,
+    'icon' => 'icon_video_penjelasan.png',
+    'title' => 'Video Penjelasan',
+    'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
+    yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
+    pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
+    solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
+    ],
+    [
+    'id' => 5,
+    'icon' => 'icon_design_grafis_uiux.png',
+    'title' => 'Desain Grafis & UI/UX',
+    'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
+    yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
+    pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
+    solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
+    ],
+    [
+    'id' => 6,
+    'icon' => 'icon_pengembangan_website.png',
+    'title' => 'Pengembangan Website',
+    'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
+    yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
+    pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
+    solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
+    ],
 ];
 @endphp
 
@@ -64,8 +64,8 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
     style="background-image: url('{{ asset('storage/assets/bg_putih_1-8.png') }}');">
     <div class="flex justify-center items-center min-h-screen pt-5">
         <div class="lg:flex lg:flex-row lg:justify-between justify-center items-center mb-10">
-            <img src="{{ asset('storage/assets/gambar_tab.png') }}" alt="asset" class="lg:w-3/6 w-full block lg:hidden">
-            <div
+            <img src="{{ asset('storage/assets/gambar_tab.png') }}" alt="asset" class="lg:w-3/6 w-full block lg:hidden" data-aos="fade-left">
+            <div data-aos="fade-right"
                 class="flex flex-col items-center justify-center text-center lg:items-start lg:text-left lg:justify-start">
                 <h1 class="text-3xl font-bold italic">Bersiaplah untuk level baru!</h1>
                 <h1 class="text-xl max-w-md mt-10 mx-auto">
@@ -105,12 +105,12 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 </div>
 
 {{-- PAKET LAYANAN --}}
-<div class="mx-auto bg-cover bg-no-repeat bg-center flex items-center justify-center"
+<div class="px-5 bg-cover bg-no-repeat bg-center flex items-center justify-center"
     style="background-image: url('{{ asset('storage/assets/bg_putih_polos-8.png') }}');">
     <div class="container mx-auto">
         <div class="flex flex-col justify-center">
             {{-- Header Section --}}
-            <div class="w-full flex flex-col md:flex-row md:justify-between items-center px-5 py-6 md:py-12">
+            <div data-aos="zoom-in" class="w-full flex flex-col md:flex-row md:justify-between items-center px-5 py-6 md:py-12">
                 <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                     Harga <span class="font-bold italic">Paket</span>
                 </h1>
@@ -143,7 +143,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
                 <!-- Card 1 -->
-                <div
+                <div data-aos="zoom-in-up" data-aos-delay="100"
                     class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
@@ -242,7 +242,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                 </div>
 
                 <!-- Card 2 -->
-                <div
+                <div data-aos="zoom-in-up" data-aos-delay="200"
                     class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
@@ -363,7 +363,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                 </div>
 
                 <!-- Card 3 -->
-                <div
+                <div data-aos="zoom-in-up" data-aos-delay="300"
                     class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
                     <!-- White Card Section -->
                     <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
@@ -517,7 +517,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
             <img src="{{ asset('storage/assets/logo_andromega_hitam.png') }}" alt="MegaLink" class="w-48">
         </div>
         {{-- Title Section --}}
-        <div class="flex-col justify-center pt-8 md:pt-0 lg:px-25 p-5">
+        <div data-aos="zoom-in" class="flex-col justify-center pt-8 md:pt-0 lg:px-25 p-5">
             <div class="flex flex-col items-center w-full mb-10">
                 {{-- Header Section --}}
                 <div class="w-full flex flex-col lg:flex-row lg:justify-between items-center my-5">
@@ -559,57 +559,63 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                 <div class="swiper-wrapper mb-32">
                     {{-- CONTENT --}}
                     @foreach ($layananData as $data)
-                    <div class="swiper-slide flex justify-center">
-                        <div class="w-full md:w-auto">
-                            {{-- BASE CARD --}}
-                            <div class="shadow-xl w-full min-h-[510px] max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] p-4 flex flex-col cursor-pointer transition-all ease-in-out duration-300 place-items-stretch"
-                                onclick="showContent(this)" id="baseCard{{ $data['id'] }}">
-                                <!-- Icon Section -->
-                                <div class="flex-grow flex items-center justify-center py-12">
-                                    <img src="{{ asset('storage/assets/'.$data['icon']) }}" alt="{{ $data['title'] }}"
-                                        class="w-60">
-                                </div>
-                                <!-- Text Card Section -->
-                                <div class="w-full rounded-2xl p-4 flex justify-between items-center mt-auto bg-cover bg-no-repeat bg-center"
-                                    style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
-                                    <div>
-                                        <h3 class="font-bold text-lg text-indigo-900">{{$data['title']}}</h3>
+                    <div data-aos="zoom-in-up" data-aos-delay="150" class="swiper-slide flex justify-center">
+                        <div class="w-full md:w-auto card-container">
+                            <div class="card-wrapper h-[510px]" id="cardWrapper{{ $data['id'] }}">
+                                {{-- BASE CARD --}}
+                                <div class="card-front shadow-xl w-full min-h-[510px] max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] p-4 flex flex-col cursor-pointer transition-all ease-in-out duration-300 place-items-stretch"
+                                    onclick="flipCard({{ $data['id'] }})" id="baseCard{{ $data['id'] }}">
+                                    <!-- Icon Section -->
+                                    <div class="flex-grow flex items-center justify-center py-12">
+                                        <img src="{{ asset('storage/assets/'.$data['icon']) }}" alt="{{ $data['title'] }}"
+                                            class="w-60">
                                     </div>
-                                    <div class="h-10 w-10 rounded-full flex items-center justify-center text-white">
-                                        <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)" stroke="#ffffff">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                                <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4"
-                                                    fill="#f05426" strokewidth="0"></rect>
-                                            </g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path
-                                                    d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                                    fill="#ffffff"></path>
-                                            </g>
-                                        </svg>
+                                    <!-- Text Card Section -->
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="card_image">
+                                                <img src="{{ asset('storage/assets/bg_card.png') }}" alt="" srcset="">
+                                                <div class="flex flex-col justify-between p-4 relative z-10">
+                                                    <h3 class="max-w-[200px] break-words font-bold text-lg text-indigo-900">{{$data['title']}}</h3>
+                                                </div>
+                                            </div>
+                                            <div class="card_svg bg-gradient-to-br from-[#6a3988] via-[#6f3b8c] via-[#743e90 to-[#773f92]">
+                                                    <svg class="h-10 w-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)" stroke="#ffffff">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                                            <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4"
+                                                                fill="#f05426" strokewidth="0"></rect>
+                                                        </g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                            stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path
+                                                                d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
+                                                                fill="#ffffff"></path>
+                                                        </g>
+                                                    </svg>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {{-- content --}}
-                            <div class="max-w-sm min-h-[510px] p-6 bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] text-white rounded-3xl shadow-lg hidden cursor-pointer transition-all ease-in-out duration-300"
-                                onclick="showContent(this)" id="detailedContent{{$data['id']}}">
-                                <div class="flex items-center justify-between mb-4">
-                                    <h2 class="text-lg font-semibold">{{$data['title']}}</h2>
-                                    <img src="{{ asset('storage/assets/'. $data['icon']) }}" alt="ISP" srcset=""
-                                        class="w-16">
+                                {{-- content --}}
+                                <div class="card-back max-w-sm min-h-[510px] p-6 bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] text-white rounded-3xl shadow-lg cursor-pointer"
+                                    onclick="flipCard({{ $data['id'] }})" id="detailedContent{{$data['id']}}"">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h2 class="text-lg font-semibold">{{$data['title']}}</h2>
+                                        <img src="{{ asset('storage/assets/'. $data['icon']) }}" alt="ISP" srcset=""
+                                            class="w-16">
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-2">{{$data['title']}}</h3>
+                                    <p class="text-sm leading-relaxed">
+                                        Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk
+                                        menyediakan solusi Teknologi Informasi yang objektif dan tidak memihak kepada
+                                        pelanggan kami. Kami menyadari bahwa keberhasilan bisnis pelanggan tergantung
+                                        pada keandalan dan kinerja sistem TI mereka. Oleh karena itu, kami menyampaikan
+                                        solusi dengan integritas dan komitmen untuk mencapai kepuasan maksimal melalui
+                                        layanan yang responsif dan dukungan pelanggan yang terbaik.
+                                    </p>
                                 </div>
-                                <h3 class="text-xl font-bold mb-2">{{$data['title']}}</h3>
-                                <p class="text-sm leading-relaxed">
-                                    Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk
-                                    menyediakan solusi Teknologi Informasi yang objektif dan tidak memihak kepada
-                                    pelanggan kami. Kami menyadari bahwa keberhasilan bisnis pelanggan tergantung
-                                    pada keandalan dan kinerja sistem TI mereka. Oleh karena itu, kami menyampaikan
-                                    solusi dengan integritas dan komitmen untuk mencapai kepuasan maksimal melalui
-                                    layanan yang responsif dan dukungan pelanggan yang terbaik.
-                                </p>
                             </div>
                         </div>
                     </div>

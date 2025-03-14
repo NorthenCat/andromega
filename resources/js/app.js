@@ -7,6 +7,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import AOS from "aos";  
+import "aos/dist/aos.css";
+
+
+
 window.showContent = function (element) {
     const id = element.id.match(/\d+/)[0];
     const baseCard = document.getElementById(`baseCard${id}`);
@@ -21,6 +26,13 @@ window.showContent = function (element) {
     }
 };
 
+window.flipCard = function(id) {
+    const cardWrapper = document.getElementById(`cardWrapper${id}`);
+    if (cardWrapper) {
+        cardWrapper.classList.toggle('flipped');
+    }
+};
+
 window.toggleMenu = function () {
     const navbarMenu = document.getElementById("navbar-sticky");
     navbarMenu.classList.toggle("hidden");
@@ -28,6 +40,13 @@ window.toggleMenu = function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: false,
+        mirror: false,
+    });
+
     const swiper = new Swiper(".layananSwiper", {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: "auto",
