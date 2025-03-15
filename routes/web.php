@@ -54,13 +54,15 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('FaqPage');
 })->name('faq');
-;
 Route::get('/paket', function () {
     return view('PaketLayananPage');
 })->name('paket');
 Route::get('/contact', function () {
     return view('ContactUsPage');
 })->name('contact');
+Route::get('/service', function () {
+    return view('ServiceSolutionPage');
+})->name('service');
 
 // Fallback
 Route::fallback(function () {

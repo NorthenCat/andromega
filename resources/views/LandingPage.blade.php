@@ -556,7 +556,7 @@ $layananData = [
         {{-- Card Section --}}
         <div class="relative pb-30">
             <div class="swiper layananSwiper mx-auto">
-                <div class="swiper-wrapper mb-32">
+                <div class="swiper-wrapper mb-32 py-12">
                     {{-- CONTENT --}}
                     @foreach ($layananData as $data)
                     <div data-aos="zoom-in-up" data-aos-delay="150" class="swiper-slide flex justify-center">

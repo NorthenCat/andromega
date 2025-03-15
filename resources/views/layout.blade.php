@@ -42,27 +42,27 @@
                     </a>
                 </div>
                 <ul
-                    class="flex flex-col p-4 xl:p-1 mt-4 text-lg font-normal border {{ request()->is('contact') || request()->is('paket') ? 'text-[#262262]' : 'text-white' }} xl:border-none xl:rounded-none xl:bg-transparent rounded-lg xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0">
+                    class="flex flex-col p-4 xl:p-1 mt-4 text-lg font-normal border {{ request()->is('contact') || request()->is('paket') ? 'text-[#262262]' : 'text-gray-300' }} xl:border-none xl:rounded-none xl:bg-transparent rounded-lg xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0">
                     <li>
                         <a href="{{ route('home') }}"
-                            class="block py-2 px-3 lg:hover:font-bold lg:p-1  {{ request()->is('/') ? 'font-bold ' : '' }}">
+                            class="block py-2 px-3 lg:hover:text-white lg:p-1  {{ request()->is('/') ? 'font-bold ' : '' }}">
                             Home
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('paket') }}"
-                            class="block py-2 px-3 lg:hover:font-bold lg:p-1  {{ request()->is('paket') || request()->is('paket/*') ? 'font-bold ' : '' }}">
+                            class="block py-2 px-3 lg:hover:text-white lg:p-1  {{ request()->is('paket') || request()->is('paket/*') ? 'font-bold ' : '' }}">
                             Paket Layanan
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 px-3 lg:hover:font-bold lg:p-1 ">
+                        <a href="{{ route('service') }}" class="block py-2 px-3 lg:hover:text-white lg:p-1 {{ request()->is('service') ? 'font-bold ' : '' }}">
                             Service & Solution
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('faq') }}"
-                            class="block py-2 px-3 lg:hover:font-bold lg:p-1 {{ request()->is('faq') ? 'font-bold ' : '' }}">
+                            class="block py-2 px-3 lg:hover:text-white lg:p-1 {{ request()->is('faq') ? 'font-bold ' : '' }}">
                             FAQs
                         </a>
                     </li>
