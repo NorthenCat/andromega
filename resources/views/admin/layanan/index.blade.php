@@ -56,8 +56,13 @@
                                         </th>
                                         <th scope="col"
                                             class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                            Photo/Icon
+                                            Photo (Service Page)
                                         </th>
+                                        <th scope="col"
+                                            class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                            Icon (Landing Page)
+                                        </th>
+
                                         <th scope="col"
                                             class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
                                             Nama Layanan
@@ -81,6 +86,10 @@
                                     <tr>
                                         <td class="p-4 text-sm text-gray-500 dark:text-white">
                                             {{ $loop->iteration }}</td>
+                                        <td class="p-4 text-sm text-gray-500 dark:text-white text-nowrap">
+                                            <img class="w-24 h-24 object-cover rounded-lg"
+                                                src="{{ asset('storage/'.$data->image) }}" alt="icon">
+                                        </td>
                                         <td class="p-4 text-sm text-gray-500 dark:text-white text-nowrap">
                                             <img class="w-24 h-24 object-cover rounded-lg"
                                                 src="{{ asset('storage/'.$data->icon) }}" alt="icon">
@@ -148,13 +157,25 @@
                 @csrf
                 <input type="hidden" id="layanan_id" name="layanan_id">
                 <div class="grid sm:grid-cols-2 gap-4 mb-4 grid-cols-2">
-                    {{-- upload icon atau gambar --}}
+                    {{-- upload icon --}}
+                    <div class="col-span-full flex flex-col justify-between">
+                        {{-- show icon if on mode edit --}}
+                        <img id="iconImage" class="w-full object-cover rounded-lg mb-2" src="" alt="icon image">
+                        <label for="icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Icon
+                            (Show in Landing Page)</label>
+                        <input type="file" name="image_1" id="icon" accept="image/*"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            required="">
+                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PNG, JPG, SVG
+                            (MIN. 100x100px).</p>
+                    </div>
+                    {{-- upload gambar --}}
                     <div class="col-span-full flex flex-col justify-between">
                         {{-- show image if on mode edit --}}
-                        <img id="iconImage" class="w-full object-cover rounded-lg mb-2" src="" alt="icon image">
-                        <label for="icon"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Icon</label>
-                        <input type="file" name="image" id="icon" accept="image/*"
+                        <img id="imageService" class="w-full object-cover rounded-lg mb-2" src="" alt="image service">
+                        <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image
+                            (Show in Service Page)</label>
+                        <input type="file" name="image_2" id="image" accept="image/*"
                             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                             required="">
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PNG, JPG, SVG
@@ -227,7 +248,7 @@
             <div class="p-4 md:p-5">
                 <form action="{{route('admin.layanan.index')}}" class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     {{-- Nama Layanan --}}
-                    <div>
+                    <div class="col-span-full">
                         <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama
                             Layanan</label>
                         <input id="nama" type="text"
@@ -318,10 +339,15 @@
         $('#layananForm #nama').val(layanan.nama);
         editor.setData(layanan.deskripsi);
         $('#iconImage').attr('src', '{{ asset("storage/") }}/' + layanan.icon).show();
+        $('#imageService').attr('src', '{{ asset("storage/") }}/' + layanan.image).show();
         $('#layanan-modal').removeClass('hidden');
         $('#layananForm').attr('data-mode', 'edit');
         $('#layananForm #deleteButton').show();
         $('#layananForm #deleteButton').attr('onclick', `deleteModal('layanan', ${layanan.id})`);
+
+        // Remove required attribute when editing
+        $('#icon').removeAttr('required');
+        $('#image').removeAttr('required');
     }
 
     function addModal() {
@@ -331,6 +357,7 @@
         editor.setData('');
         // hide icon
         $('#iconImage').attr('src', '').hide();
+        $('#imageService').attr('src', '').hide();
         $('#layanan-modal').removeClass('hidden');
         $('#layananForm').attr('data-mode', 'add');
         $('#layananForm #deleteButton').hide();

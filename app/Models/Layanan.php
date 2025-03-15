@@ -11,6 +11,7 @@ class Layanan extends Model
         'uuid',
         'nama',
         'icon',
+        'image',
         'deskripsi',
     ];
 

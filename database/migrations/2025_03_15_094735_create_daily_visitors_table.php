@@ -10,13 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('daily_visitors', function (Blueprint $table) {
             $table->id();
-            $table->string('uuid')->unique();
-            $table->string('nama');
-            $table->string('icon');
-            $table->string('image');
-            $table->text('deskripsi');
+            $table->date('date')->unique();
+            $table->integer('count')->default(0);
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('daily_visitors');
     }
 };

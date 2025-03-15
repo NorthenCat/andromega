@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\LayananController;
 use App\Http\Controllers\admin\PaketController;
 use App\Http\Controllers\admin\SettingWebController;
 use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 
 // Authentication
@@ -48,19 +49,10 @@ Route::middleware('auth')->name('admin.')->group(function () {
     Route::post('/logout', [App\Http\Controllers\auth\AuthController::class, 'logout'])->name('logout');
 });
 
-Route::get('/', function () {
-    return view('LandingPage');
-})->name('home');
-Route::get('/faq', function () {
-    return view('FaqPage');
-})->name('faq');
-;
-Route::get('/paket', function () {
-    return view('PaketLayananPage');
-})->name('paket');
-Route::get('/contact', function () {
-    return view('ContactUsPage');
-})->name('contact');
+Route::get('/', [FrontEndController::class, 'landing'])->name('home');
+Route::get('/paket', [FrontEndController::class, 'paket'])->name('paket');
+Route::get('/faq', [FrontEndController::class, 'faq'])->name('faq');
+Route::get('/contact-us', [FrontEndController::class, 'contactUs'])->name('contact');
 
 // Fallback
 Route::fallback(function () {

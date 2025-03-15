@@ -55,7 +55,7 @@
                                 x-model="password_confirmation"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 placeholder="********">
-                            <div x-show="password && password_confirmation && password !== password_confirmation"
+                            <div x-show="password.length > 0 && password_confirmation.length > 0 && password !== password_confirmation"
                                 class="text-red-500 text-sm mt-2">
                                 Passwords do not match.
                             </div>
