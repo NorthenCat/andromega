@@ -114,7 +114,7 @@ $layananData = [
                 <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                     Harga <span class="font-bold italic">Paket</span>
                 </h1>
-                <button type="button" class="md:w-auto">
+                <button type="button" class="md:w-auto" onclick="window.location.href='{{ route('paket') }}'">
                     <div
                         class="bg-[#f05426] text-white rounded-full md:text-lg text-normal font-normal pr-2 text-center flex items-center justify-center md:justify-start">
                         <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-12">
@@ -524,13 +524,12 @@ $layananData = [
                     <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                         <span class="font-bold italic">Layanan Unggulan</span> kami
                     </h1>
-                    <button type="button" class="mt-10">
-                        <div
-                            class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
+                    <button type="button" class="mt-10" onclick="window.location.href='{{ route('service') }}'">
+                        <div class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
                             <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
-                                <a href="#" class="block w-full lg:p-1">
+                                <span class="block w-full lg:p-1">
                                     Cek Layanan lainnya
-                                </a>
+                                </span>
                             </div>
                             <div class="h-10 w-10 flex items-center justify-center my-auto mx-2">
                                 <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
@@ -627,6 +626,6 @@ $layananData = [
         </div>
     </div>
 </div>
-</div>
+
 
 @endsection
