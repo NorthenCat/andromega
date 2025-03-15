@@ -41,7 +41,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service1.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service1.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->
@@ -94,7 +94,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service2.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service2.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->
@@ -147,7 +147,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service3.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service3.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->
@@ -208,7 +208,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service4.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service4.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->
@@ -261,7 +261,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service5.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service5.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->
@@ -314,7 +314,7 @@
             <div class="w-full relative">
                 <!-- Mobile Image -->
                 <div class="block md:hidden">
-                    <img src="{{ asset('storage/assets/service6.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
+                    <img loading="lazy" src="{{ asset('storage/assets/service6.jpg') }}" alt="Service" class="w-full h-auto rounded-lg">
                 </div>
                 
                 <!-- Background Image Container (shows only on md screens and up) -->

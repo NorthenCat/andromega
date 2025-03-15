@@ -573,14 +573,14 @@ $layananData = [
                                     <!-- Text Card Section -->
                                     <div class="container">
                                         <div class="card">
-                                            <div class="card_image">
+                                            <div class="card_image bg-cover">
                                                 <img src="{{ asset('storage/assets/bg_card.png') }}" alt="" srcset="">
                                                 <div class="flex flex-col justify-between p-4 relative z-10">
                                                     <h3 class="max-w-[200px] break-words font-bold text-lg text-indigo-900">{{$data['title']}}</h3>
                                                 </div>
                                             </div>
                                             <div class="card_svg bg-gradient-to-br from-[#6a3988] via-[#6f3b8c] via-[#743e90 to-[#773f92]">
-                                                    <svg class="h-10 w-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
+                                                    <svg class="h-7 w-7" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)" stroke="#ffffff">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0">
                                                             <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4"

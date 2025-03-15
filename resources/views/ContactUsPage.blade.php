@@ -49,7 +49,7 @@
                 <button type="button" class="mt-10">
                     <div
                         class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
-                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
+                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-14">
                             <a href="#" class="block w-full lg:p-1">
                                 Hubungi Sales
                             </a>
@@ -106,7 +106,7 @@
                 <button type="button" class="mt-10">
                     <div
                         class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
-                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
+                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-14">
                             <a href="#" class="block w-full lg:p-1">
                                 Hubungi Support
                             </a>
