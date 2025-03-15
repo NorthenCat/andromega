@@ -16,6 +16,11 @@ class FrontEndController extends Controller
         return view('PaketLayananPage');
     }
 
+    public function service()
+    {
+        return view('ServiceSolutionPage');
+    }
+
     public function faq()
     {
         return view('FaqPage');

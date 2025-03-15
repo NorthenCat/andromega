@@ -56,7 +56,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('service') }}" class="block py-2 px-3 lg:p-1 {{ request()->is('service') ? 'font-bold text-white' : (request()->is('paket') || (request()->is('contact')) ? 'text-[#3a3491] hover:text-[#262262] lg:hover:text-[#262262]' : 'text-gray-300 hover:text-white lg:hover:text-white') }}">
+                        <a href="{{ route('service') }}"
+                            class="block py-2 px-3 lg:p-1 {{ request()->is('service') ? 'font-bold text-white' : (request()->is('paket') || (request()->is('contact')) ? 'text-[#3a3491] hover:text-[#262262] lg:hover:text-[#262262]' : 'text-gray-300 hover:text-white lg:hover:text-white') }}">
                             Service & Solution
                         </a>
                     </li>
@@ -88,64 +89,74 @@
             <!-- Company information section -->
             <div class="{{ request()->is('contact') ? 'block' : 'hidden' }}">
                 <div class="grid md:grid-cols-2 gap-8 ">
-                  <!-- Left column with company info -->
-                  <div class="text-start">
-                    <h2 class="text-2xl font-bold mb-6">PT. ANDROMEGA DATA NUSANTARA</h2>
-                    <div class="space-y-4">
-                      <!-- Address with icon -->
-                      <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-white flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <div class="space-y-1">
-                          <p>Jl. Panjang 2 Blok AU 10, Puri Bojong Lestari</p>
-                          <p>Pabuaran - Bojong Gede</p>
-                          <p>Kabupaten Bogor - Jawa Barat</p>
-                          <p>Indonesia</p>
+                    <!-- Left column with company info -->
+                    <div class="text-start">
+                        <h2 class="text-2xl font-bold mb-6">PT. ANDROMEGA DATA NUSANTARA</h2>
+                        <div class="space-y-4">
+                            <!-- Address with icon -->
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 mr-3 text-white flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <div class="space-y-1">
+                                    <p>Jl. Panjang 2 Blok AU 10, Puri Bojong Lestari</p>
+                                    <p>Pabuaran - Bojong Gede</p>
+                                    <p>Kabupaten Bogor - Jawa Barat</p>
+                                    <p>Indonesia</p>
+                                </div>
+                            </div>
+
+                            <!-- Email with icon -->
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-white flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <a href="mailto:info@andromega.co.id"
+                                    class="hover:text-white transition">info@andromega.co.id</a>
+                            </div>
+
+                            <!-- Phone with icon -->
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-white flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <a href="tel:+6281752285844" class="hover:text-blue-400 transition">Admin (+62) 817 5228
+                                    844</a>
+                            </div>
                         </div>
-                      </div>
-                      
-                      <!-- Email with icon -->
-                      <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <a href="mailto:info@andromega.co.id" class="hover:text-white transition">info@andromega.co.id</a>
-                      </div>
-                      
-                      <!-- Phone with icon -->
-                      <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                        <a href="tel:+6281752285844" class="hover:text-blue-400 transition">Admin (+62) 817 5228 844</a>
-                      </div>
                     </div>
-                  </div>
-                  
-                  <!-- Right column with company services-->
-                  <div class="text-start">
-                    <h3 class="text-xl font-semibold mb-4">Our Services</h3>
-                    <ul class="space-y-2">
-                      <li class="hover:text-blue-400 transition cursor-pointer">Layanan ISP</li>
-                      <li class="hover:text-blue-400 transition cursor-pointer">Infrastruktur Jaringan</li>
-                      <li class="hover:text-blue-400 transition cursor-pointer">Pengembangan Perangkat Lunak</li>
-                      <li class="hover:text-blue-400 transition cursor-pointer">Video Penjelasan</li>
-                      <li class="hover:text-blue-400 transition cursor-pointer">Desain Grafis & UI/UX</li>
-                      <li class="hover:text-blue-400 transition cursor-pointer">Pengembangan Website</li>
-                    </ul>
-                  </div>
+
+                    <!-- Right column with company services-->
+                    <div class="text-start">
+                        <h3 class="text-xl font-semibold mb-4">Our Services</h3>
+                        <ul class="space-y-2">
+                            <li class="hover:text-blue-400 transition cursor-pointer">Layanan ISP</li>
+                            <li class="hover:text-blue-400 transition cursor-pointer">Infrastruktur Jaringan</li>
+                            <li class="hover:text-blue-400 transition cursor-pointer">Pengembangan Perangkat Lunak</li>
+                            <li class="hover:text-blue-400 transition cursor-pointer">Video Penjelasan</li>
+                            <li class="hover:text-blue-400 transition cursor-pointer">Desain Grafis & UI/UX</li>
+                            <li class="hover:text-blue-400 transition cursor-pointer">Pengembangan Website</li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Divider -->
                 <div class="border-t border-white my-8"></div>
             </div>
-            
+
             <!-- Copyright section -->
             <div class="justify-between items-center text-sm text-white">
-              <p>Copyright © 2023 PT. Andromega Data Nusantara. All Rights Reserved.</p>
+                <p>Copyright © 2023 PT. Andromega Data Nusantara. All Rights Reserved.</p>
             </div>
-          </div>
+        </div>
     </footer>
 
     <!-- Flowbite JavaScript -->

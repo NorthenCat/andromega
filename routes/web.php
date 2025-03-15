@@ -51,6 +51,7 @@ Route::middleware('auth')->name('admin.')->group(function () {
 
 Route::get('/', [FrontEndController::class, 'landing'])->name('home');
 Route::get('/paket', [FrontEndController::class, 'paket'])->name('paket');
+Route::get('/service', [FrontEndController::class, 'service'])->name('service');
 Route::get('/faq', [FrontEndController::class, 'faq'])->name('faq');
 Route::get('/contact-us', [FrontEndController::class, 'contactUs'])->name('contact');
 
