@@ -201,9 +201,9 @@
     position: absolute;
     right: 0;
     top: 0;
-    border-left: 0.5rem solid #fff;
-    border-bottom: 0.5rem solid #fff;
-    border-radius: 0 0 0 2rem;
+    border-left: 1.7rem solid #fff;
+    border-bottom: 1.7rem solid #fff;
+    border-radius: 0 0 0 2.7rem;
     padding: 0.3rem;
 }
 
@@ -220,7 +220,7 @@
     bottom: -1.125rem;
     right: 0;
     border-top-right-radius: 0.8rem;;
-    box-shadow: 0.15rem -0.350rem #783f93;
+    box-shadow: 0.20rem -0.27rem #783f93;
 
 }
 

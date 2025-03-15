@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="lg:px-28 px-5 bg-cover bg-no-repeat bg-center min-h-screen relative overflow-visibles"
+<div class="lg:px-28 px-5 bg-cover bg-no-repeat bg-center min-h-screen pb-20 relative overflow-visibles"
     style="background-image: url('{{ asset('storage/assets/bg_putih_1-8.png') }}');">
     <div class="justify-center lg:pt-40 pt-28 relative z-10">
         {{-- HEADER --}}

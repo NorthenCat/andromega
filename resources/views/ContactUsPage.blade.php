@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<div class="lg:px-28 px-5 bg-cover bg-no-repeat bg-center min-h-screen relative overflow-visible"
+<div class="lg:px-28 px-5 bg-cover bg-no-repeat bg-center min-h-screen relative overflow-visible pb-10"
     style="background-image: url('{{ asset('storage/assets/bg_ungu-8.png') }}');">
     <img src="{{ asset('storage/assets/gambar_cs.png') }}" alt="" srcset=""
         class="xl:w-5/12 w-1/2 absolute xl:-top-24 lg:-top-14 right-20 z-0 hidden md:block">
@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-wrap justify-center pt-10 gap-5 z-10">
             {{-- card --}}
-            <div class="flex-1 basis-full md:basis-2/5 min-h-[400px] my-5 mx-10 md:p-12 p-5 md:px-10 px-5 bg-white rounded-3xl bg-cover bg-no-repeat shadow-lg text-center"
+            <div class="flex-1 basis-full md:basis-2/5 min-h-[400px] my-5  md:p-12 p-5 md:px-10 px-5 bg-white rounded-3xl bg-cover bg-no-repeat shadow-lg text-center"
                 style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
                 <div class="w-16 h-16 mx-auto my-5">
                     <svg class="w-16 h-16" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
                 <button type="button" class="mt-10">
                     <div
                         class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
-                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
+                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-14">
                             <a href="#" class="block w-full lg:p-1">
                                 Hubungi Sales
                             </a>
@@ -73,7 +73,7 @@
                 </button>
             </div>
             {{-- Card --}}
-            <div class="flex-1 basis-full md:basis-2/5 min-h-[400px]  my-5 mx-10 md:p-12 p-5 md:px-10 px-5 bg-white rounded-3xl bg-cover bg-no-repeat shadow-lg text-center"
+            <div class="flex-1 basis-full md:basis-2/5 min-h-[400px]  my-5  md:p-12 p-5 md:px-10 px-5 bg-white rounded-3xl bg-cover bg-no-repeat shadow-lg text-center"
                 style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
                 <div class="w-16 h-16 mx-auto my-5">
                     <svg class="w-16 h-16" fill="#000000" height="200px" width="200px" version="1.1" id="Layer_1"
@@ -106,7 +106,7 @@
                 <button type="button" class="mt-10">
                     <div
                         class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
-                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
+                        <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-14">
                             <a href="#" class="block w-full lg:p-1">
                                 Hubungi Support
                             </a>

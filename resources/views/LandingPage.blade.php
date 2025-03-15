@@ -114,7 +114,7 @@ $layananData = [
                 <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                     Harga <span class="font-bold italic">Paket</span>
                 </h1>
-                <button type="button" class="md:w-auto">
+                <button type="button" class="md:w-auto" onclick="window.location.href='{{ route('paket') }}'">
                     <div
                         class="bg-[#f05426] text-white rounded-full md:text-lg text-normal font-normal pr-2 text-center flex items-center justify-center md:justify-start">
                         <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-12">
@@ -524,13 +524,12 @@ $layananData = [
                     <h1 class="text-2xl md:text-3xl text-center md:text-left mb-5 md:mb-0">
                         <span class="font-bold italic">Layanan Unggulan</span> kami
                     </h1>
-                    <button type="button" class="mt-10">
-                        <div
-                            class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
+                    <button type="button" class="mt-10" onclick="window.location.href='{{ route('service') }}'">
+                        <div class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
                             <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
-                                <a href="#" class="block w-full lg:p-1">
+                                <span class="block w-full lg:p-1">
                                     Cek Layanan lainnya
-                                </a>
+                                </span>
                             </div>
                             <div class="h-10 w-10 flex items-center justify-center my-auto mx-2">
                                 <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
@@ -556,7 +555,7 @@ $layananData = [
         {{-- Card Section --}}
         <div class="relative pb-30">
             <div class="swiper layananSwiper mx-auto">
-                <div class="swiper-wrapper mb-32">
+                <div class="swiper-wrapper mb-32 py-12">
                     {{-- CONTENT --}}
                     @foreach ($layananData as $data)
                     <div data-aos="zoom-in-up" data-aos-delay="150" class="swiper-slide flex justify-center">
@@ -573,14 +572,14 @@ $layananData = [
                                     <!-- Text Card Section -->
                                     <div class="container">
                                         <div class="card">
-                                            <div class="card_image">
+                                            <div class="card_image bg-cover">
                                                 <img src="{{ asset('storage/assets/bg_card.png') }}" alt="" srcset="">
                                                 <div class="flex flex-col justify-between p-4 relative z-10">
                                                     <h3 class="max-w-[200px] break-words font-bold text-lg text-indigo-900">{{$data['title']}}</h3>
                                                 </div>
                                             </div>
                                             <div class="card_svg bg-gradient-to-br from-[#6a3988] via-[#6f3b8c] via-[#743e90 to-[#773f92]">
-                                                    <svg class="h-10 w-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
+                                                    <svg class="h-7 w-7" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)" stroke="#ffffff">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0">
                                                             <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4"
@@ -627,6 +626,6 @@ $layananData = [
         </div>
     </div>
 </div>
-</div>
+
 
 @endsection
