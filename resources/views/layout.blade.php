@@ -4,7 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+
+    <meta name="description" content="{{$informationWeb->deskripsi}}">
+    <meta name="keywords" content="{{$informationWeb->keyword}}">
+    <meta name="author" content="{{$informationWeb->nama_website}}">
+
+    <meta property="og:url" content="{{url()->current()}}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{$informationWeb->nama_website}}">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="{{$informationWeb->nama_website}}">
+    <meta property="og:description" content="{{$informationWeb->deskripsi}}">
+    <meta property="og:image" content="{{ asset('storage/assets/logo_andromega_hitam.png') }}">
+    <title>{{$informationWeb->nama_website}}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('storage/assets/favicon.ico') }}">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     @vite(['resources/css/app.css','resources/js/app.js'])
@@ -20,7 +37,7 @@
         <div class="w-full flex flex-wrap items-center justify-between px-5 py-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src={{ asset(request()->is('contact') || request()->is('paket') ?
-                'storage/assets/logo_andromega_hitam.png' : 'storage/assets/logo_andromega_putih.png') }} class="md:h-8
+                'storage/assets/logo_andromega_hitam.png' : 'storage/assets/logo_andromega_putih.png') }} class="md:h-10
                 h-9 mx-4"
                 alt="Website Logo">
             </a>
