@@ -26,8 +26,13 @@ class FAQ extends Model
     {
         $q = $query;
 
-        if (isset($filters['question']) && $filters['question'] != '') {
-            $q = $q->where('question', 'like', '%' . $filters['question'] . '%');
+        if (isset($filters['search']) && $filters['search'] != '') {
+            $searchWords = explode(' ', $filters['search']);
+            foreach ($searchWords as $word) {
+                if (strlen($word) > 2) { // Skip very short words
+                    $q = $q->where('question', 'like', '%' . $word . '%');
+                }
+            }
         }
 
         return $q;

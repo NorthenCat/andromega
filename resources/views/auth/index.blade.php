@@ -31,11 +31,14 @@
         }
     </script>
 
-    <!-- Critical CSS first -->
+    <!-- Critical CSS AND JS first -->
     @if(app()->environment('local'))
     @vite(['resources/css/app.css'])
+    @vite('resources/js/app.js')
     @else
-    <link rel="stylesheet" href="{{asset('build/assets/app-CZ89ZT6A.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-Cytcyt5Z.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-BHR4_z9_.css')}}">`
+    <script src="{{asset('build/assets/app-EmPSINkG.js')}}"></script>
     @endif
 
 </head>
@@ -45,7 +48,8 @@
         <div class="flex flex-col items-center justify-center px-6 pt-8 mx-auto h-screen pt:mt-0 dark:bg-gray-900">
             <div class="flex items-center justify-center mb-8 lg:mb-10">
                 <img src="{{asset('img/logo-full.png')}}" class="h-20 md:h-24 block dark:hidden" alt="Andromega Logo">
-                <img src="{{asset('img/logo-white-full.png')}}" class="h-20 md:h-24 hidden dark:block" alt="Andromega Logo">
+                <img src="{{asset('img/logo-white-full.png')}}" class="h-20 md:h-24 hidden dark:block"
+                    alt="Andromega Logo">
             </div>
             <!-- Card -->
             <div class="w-full max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow dark:bg-gray-800">

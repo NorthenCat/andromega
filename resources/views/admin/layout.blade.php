@@ -17,13 +17,11 @@
     <!-- Critical CSS AND JS first -->
     @if(app()->environment('local'))
     @vite(['resources/css/app.css'])
-    @else
-    <link rel="stylesheet" href="{{asset('build/assets/app-CZ89ZT6A.css')}}">
-    @endif
-    @if(app()->environment('local'))
     @vite('resources/js/app.js')
     @else
-    <script src="{{asset('build/assets/app-DWMxmmyX.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('build/assets/app-Cytcyt5Z.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-BHR4_z9_.css')}}">`
+    <script src="{{asset('build/assets/app-EmPSINkG.js')}}"></script>
     @endif
 
     <!-- Dark mode script - needs to run early -->
@@ -210,7 +208,7 @@
                             </li>
                             <li>
                                 <a href="{{route('admin.setting-web.index')}}"
-                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/faq') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
+                                    class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {{ Request::is('admin/setting-web') ? 'bg-gray-100 dark:bg-gray-700' : '' }}">
                                     <div
                                         class="w-6 h-6 text-center text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                         <i class="fa-solid fa-gear fa-lg"></i>

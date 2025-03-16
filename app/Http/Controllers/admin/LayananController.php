@@ -62,12 +62,10 @@ class LayananController extends Controller
 
                     // Process and compress image
                     $image = Image::read($imageFile);
-                    $compressedImage = $image->scaleDown(1080)->encode(new AutoEncoder(quality: 10));
-
-                    // Save to storage
+                    // Save original image without compression
                     \Storage::disk('public')->put(
                         'layanan/' . $imageName,
-                        $compressedImage->toString()
+                        file_get_contents($imageFile)
                     );
 
                     // Prepare data for database
@@ -140,12 +138,10 @@ class LayananController extends Controller
 
                     // Process and compress image
                     $image = Image::read($imageFile);
-                    $compressedImage = $image->scaleDown(1080)->encode(new AutoEncoder(quality: 10));
-
-                    // Save to storage
+                    // Save original image without compression
                     \Storage::disk('public')->put(
                         'layanan/' . $imageName,
-                        $compressedImage->toString()
+                        file_get_contents($imageFile)
                     );
 
                     $request['image'] = 'layanan/' . $imageName;

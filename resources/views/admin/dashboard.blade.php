@@ -90,9 +90,9 @@
         },
         tooltip: {
             enabled: true,
-            theme: 'light',
+            theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
             custom: function({ series, seriesIndex, dataPointIndex }) {
-                return '<div class="p-2">' +
+                return '<div class="p-2 bg-white">' +
                     '<span class="font-medium">' + daysOfWeek[dataPointIndex] + '</span>' +
                     '<div class="text-blue-600 font-bold">' +
                         series[seriesIndex][dataPointIndex] + ' visitors' +
@@ -139,14 +139,20 @@
                 }
             },
             axisBorder: {
-                show: false
+            show: false
             },
             axisTicks: {
-                show: false
+            show: false
             }
         },
         yaxis: {
-            show: true
+            show: true,
+            labels: {
+                style: {
+                    fontFamily: "Inter, sans-serif",
+                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                }
+            }
         },
         fill: {
             opacity: 1

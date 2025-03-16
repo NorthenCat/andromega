@@ -10,7 +10,7 @@ class PaketController extends Controller
 {
     public function index(Request $request)
     {
-        $datas = PaketInternet::filter($request->all())->orderBy('nama_paket')->paginate(15);
+        $datas = PaketInternet::filter($request->all())->orderBy('harga')->paginate(15);
         return view('admin.paketInternet.index', compact('datas'));
     }
 

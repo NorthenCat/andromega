@@ -24,7 +24,18 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    @stack('head-scripts')
+
+    <!-- Critical CSS AND JS first -->
+    @if(app()->environment('local'))
+    @vite(['resources/css/app.css'])
+    @vite('resources/js/app.js')
+    @else
+    <link rel="stylesheet" href="{{asset('build/assets/app-Cytcyt5Z.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-BHR4_z9_.css')}}">`
+    <script src="{{asset('build/assets/app-EmPSINkG.js')}}"></script>
+    @endif
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
@@ -179,6 +190,7 @@
     <!-- Flowbite JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @stack('scripts')
 </body>
 
 </html>

@@ -176,7 +176,7 @@
                     </div>
                     <div class="col-span-1 flex flex-col justify-between">
                         <label for="kecepatan"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">kecepatan</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kecepatan</label>
                         <input type="text" name="kecepatan" id="kecepatan" min="0"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="cth. 25 Mbps" required="">
@@ -466,12 +466,31 @@
     // CKEditor 5 initialization
     ClassicEditor
         .create(document.querySelector('#deskripsi'), {
-            toolbar: ['bold', 'italic','numberedList', 'bulletedList'],
-            removePlugins: ['CKFinderUploadAdapter', 'CKFinder', 'EasyImage', 'Image', 'ImageCaption', 'ImageStyle', 'ImageToolbar', 'ImageUpload', 'MediaEmbed']
+            toolbar: ['bold', 'italic','bulletedList'],
+            removePlugins: ['CKFinderUploadAdapter', 'CKFinder', 'EasyImage', 'Image', 'ImageCaption', 'ImageStyle', 'ImageToolbar', 'ImageUpload', 'MediaEmbed'],
+            enterMode: 'list',
+            plugins: [ 'Essentials', 'Paragraph', 'Bold', 'Italic', 'List' ],
         })
         .then(editorInstance => {
-            // Store editor instance for later use
             editor = editorInstance;
+
+            // Force bullet points on every new line
+            editor.model.document.on('change:data', () => {
+                const changes = editor.model.document.differ.getChanges();
+
+                changes.forEach(change => {
+                    if (change.type === 'insert' && change.name === 'paragraph') {
+                        editor.execute('bulletedList');
+                    }
+                });
+            });
+
+            // Prevent removing bullet points
+            editor.model.document.on( 'delete', ( evt, data ) => {
+                if (data.direction === 'backward' && editor.model.document.selection.anchor.parent.name === 'listItem') {
+                    evt.stop();
+                }
+            }, { priority: 'high' } );
         })
         .catch(error => {
             console.error(error);

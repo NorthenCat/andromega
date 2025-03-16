@@ -64,8 +64,8 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
     style="background-image: url('{{ asset('storage/assets/bg_putih_1-8.png') }}');">
     <div class="flex justify-center items-center min-h-screen pt-5">
         <div class="lg:flex lg:flex-row lg:justify-between justify-center items-center mb-10">
-            <img loading="lazy" src="{{ asset('storage/assets/gambar_tab.png') }}" alt="asset" class="lg:w-3/6 w-full block lg:hidden"
-                data-aos="fade-left">
+            <img loading="lazy" src="{{ asset('storage/assets/gambar_tab.png') }}" alt="asset"
+                class="lg:w-3/6 w-full block lg:hidden" data-aos="fade-left">
             <div data-aos="fade-right"
                 class="flex flex-col justify-center items-center md:items-start space-y-10 md:pl-16">
                 <h1 class="text-2xl text-center md:text-start md:text-5xl font-bold italic">Bersiaplah untuk level baru!
@@ -76,12 +76,13 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                     cepat, dan efisien.
                 </h1>
                 <button type="button" class="">
-                    <div
-                        class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center">
+                    <a href="#paket-hero"
+                        class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center smooth-scroll"
+                        onclick="event.preventDefault(); const element = document.querySelector('#paket-hero'); const elementRect = element.getBoundingClientRect(); const absoluteElementTop = elementRect.top + window.pageYOffset; const middle = absoluteElementTop - (window.innerHeight / 2) + 360; window.scrollTo({top: middle, behavior: 'smooth'});">
                         <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
-                            <a href="#" class="block w-full lg:p-1 text-sm lg:text-base">
+                            <p class="block w-full lg:p-1 text-sm lg:text-base">
                                 Yuk, Mulai Sekarang!
-                            </a>
+                            </p>
                         </div>
                         <div class="h-10 w-10 flex items-center justify-center my-auto mx-2">
                             <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
@@ -98,7 +99,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                                 </g>
                             </svg>
                         </div>
-                    </div>
+                    </a>
                 </button>
             </div>
             <img src="{{ asset('storage/assets/gambar_tab.png') }}" alt="asset" class="lg:w-3/5 w-full hidden lg:block">
@@ -107,7 +108,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 </div>
 
 {{-- PAKET LAYANAN --}}
-<div class="px-5 bg-cover bg-no-repeat bg-center flex items-center justify-center"
+<div class="px-5 bg-cover bg-no-repeat bg-center flex items-center justify-center" id="paket-hero"
     style="background-image: url('{{ asset('storage/assets/bg_putih_polos-8.png') }}');">
     <div class="container mx-auto">
         <div class="flex flex-col justify-center">
@@ -145,6 +146,7 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+                @foreach($paket as $data)
                 <!-- Card 1 -->
                 <div data-aos="zoom-in-up" data-aos-delay="100"
                     class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
@@ -153,9 +155,10 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                         style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
                         <div class="flex justify-between items-start">
                             <div>
-                                <p class="text-gray-800 font-medium">Bulanan</p>
-                                <h2 class="text-5xl font-black italic mt-1">166.500</h2>
-                                <p class="text-gray-700 mt-1">15 Mbps</p>
+                                <p class="text-gray-800 font-medium capitalize">{{$data->tipe_paket}}</p>
+                                <h2 class="text-5xl font-black italic mt-1">{{number_format($data->harga, 0, ',', '.')}}
+                                </h2>
+                                <p class="text-gray-700 mt-1">{{$data->kecepatan}}</p>
                             </div>
                             <div
                                 class="bg-red-500 w-8 h-8 md:h-10 md:w-10 rounded-full flex items-center justify-center text-white absolute right-2 top-3">
@@ -179,28 +182,19 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
 
                     <!-- Features Section -->
                     <div class="p-6 text-white space-y-4">
-                        <!-- Feature 1 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Cocok untuk browsing dan media sosial</p>
-                        </div>
+                        @php
+                        $dom = new DOMDocument();
+                        libxml_use_internal_errors(true);
+                        $dom->loadHTML($data->deskripsi);
+                        libxml_clear_errors();
 
-                        <!-- Feature 2 -->
+                        $features = [];
+                        $liElements = $dom->getElementsByTagName('li');
+                        foreach ($liElements as $li) {
+                        $features[] = $li->textContent;
+                        }
+                        @endphp
+                        @foreach($features as $feature)
                         <div class="flex items-center space-x-3">
                             <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
                                 <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
@@ -218,291 +212,12 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                                     </g>
                                 </svg>
                             </div>
-                            <p>Streaming video HD tanpa buffering</p>
+                            <p>{{$feature}}</p>
                         </div>
-
-                        <!-- Feature 3 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Bisa digunakan untuk 2-3 perangkat</p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div data-aos="zoom-in-up" data-aos-delay="200"
-                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
-                    <!-- White Card Section -->
-                    <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
-                        style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <p class="text-gray-800 font-medium">Bulanan</p>
-                                <h2 class="text-5xl font-black italic mt-1">205.350</h2>
-                                <p class="text-gray-700 mt-1">25 Mbps</p>
-                            </div>
-                            <div
-                                class="bg-red-500 w-8 h-8 md:h-10 md:w-10 rounded-full flex items-center justify-center text-white absolute right-2 top-3">
-                                <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    transform="rotate(-45)" stroke="#ffffff">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#f05426"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#ffffff"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Features Section -->
-                    <div class="p-6 text-white space-y-4">
-                        <!-- Feature 1 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Browsing, media sosial, dan
-                                streaming lebih lancar</p>
-                        </div>
-
-                        <!-- Feature 2 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Streaming Full HD tanpa gangguan</p>
-                        </div>
-
-                        <!-- Feature 3 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Bisa digunakan untuk 3-5 perangkat </p>
-                        </div>
-                        {{-- Feature 4 --}}
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Cukup untuk gaming online dengan
-                                latensi stabil</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div data-aos="zoom-in-up" data-aos-delay="300"
-                    class="w-full h-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A]">
-                    <!-- White Card Section -->
-                    <div class="relative m-4 p-5 rounded-2xl bg-cover bg-no-repeat bg-center"
-                        style="background-image: url('{{ asset('storage/assets/bg_card.png') }}');">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <p class="text-gray-800 font-medium">Bulanan</p>
-                                <h2 class="text-5xl font-black italic mt-1">250.00</h2>
-                                <p class="text-gray-700 mt-1">30 Mbps</p>
-                            </div>
-                            <div
-                                class="bg-red-500 w-8 h-8 md:h-10 md:w-10 rounded-full flex items-center justify-center text-white absolute right-2 top-3">
-                                <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    transform="rotate(-45)" stroke="#ffffff">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#f05426"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#ffffff"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Features Section -->
-                    <div class="p-6 text-white space-y-4">
-                        <!-- Feature 1 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Cocok untuk keluarga kecil atau kantor kecil</p>
-                        </div>
-
-                        <!-- Feature 2 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Streaming Full HD dan video call tanpa lag</p>
-                        </div>
-
-                        <!-- Feature 3 -->
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Bisa digunakan untuk 4-6 perangkat</p>
-                        </div>
-                        {{-- Feature 4 --}}
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Stabil untuk gaming online dan kerja remote </p>
-                        </div>
-                        {{-- Feature 5 --}}
-                        <div class="flex items-center space-x-3">
-                            <div class="h-7 w-7 flex items-center justify-center my-auto mx-2">
-                                <svg class="w-10 h-10" viewBox="-2.4 -2.4 28.80 28.80" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                        <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff"
-                                            strokewidth="0"></rect>
-                                    </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                    </g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M6.99811 10.2467L7.43298 11.0077C7.70983 11.4922 7.84825 11.7344 7.84825 12C7.84825 12.2656 7.70983 12.5078 7.43299 12.9923L7.43298 12.9923L6.99811 13.7533C5.75981 15.9203 5.14066 17.0039 5.62348 17.5412C6.1063 18.0785 7.24961 17.5783 9.53623 16.5779L15.8119 13.8323C17.6074 13.0468 18.5051 12.654 18.5051 12C18.5051 11.346 17.6074 10.9532 15.8119 10.1677L9.53624 7.4221C7.24962 6.42171 6.1063 5.92151 5.62348 6.45883C5.14066 6.99615 5.75981 8.07966 6.99811 10.2467Z"
-                                            fill="#222222"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p>Akses gratis ke 40 channel TV untuk pengalaman hiburan yanglebih lengkap.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="flex justify-center p-4 md:p-8">
@@ -561,27 +276,26 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
         <div class="swiper layananSwiper">
             <div class="swiper-wrapper mb-24">
                 {{-- CONTENT --}}
-                @foreach ($layananData as $data)
+                @foreach ($layanan as $data)
                 <div data-aos="zoom-in-up" data-aos-delay="150" class="swiper-slide flex justify-center">
                     <div class="">
-                        <div class="card-wrapper h-[510px]" id="cardWrapper{{ $data['id'] }}">
+                        <div class="card-wrapper h-[510px]" id="cardWrapper{{ $data->id }}">
                             {{-- BASE CARD --}}
                             <div class="card-front shadow-xl w-full min-h-[510px] max-w-sm rounded-3xl  bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] p-4 flex flex-col cursor-pointer transition-all ease-in-out duration-300 place-items-stretch"
-                                onclick="flipCard({{ $data['id'] }})" id="baseCard{{ $data['id'] }}">
+                                onclick="flipCard({{ $data->id }})" id="baseCard{{ $data->id }}">
                                 <!-- Icon Section -->
                                 <div class="flex-grow flex items-center justify-center py-12">
-                                    <img src="{{ asset('storage/assets/'.$data['icon']) }}"
-                                        alt="{{ $data['title'] }}" class="w-60">
+                                    <img src="{{ asset('storage/'.$data->icon) }}" alt="{{ $data->nama }}" class="w-60">
                                 </div>
                                 <!-- Text Card Section -->
                                 <div class="container">
                                     <div class="card">
                                         <div class="card_image bg-cover">
                                             <img src="{{ asset('storage/assets/bg_card.png') }}" alt="" srcset="">
-                                            <div class="flex flex-col justify-between p-4 relative z-10">
-                                                <h3
-                                                    class="max-w-[200px] break-words font-bold text-lg text-indigo-900">
-                                                    {{$data['title']}}</h3>
+                                            <div
+                                                class="flex flex-col justify-center items-start h-full p-4 relative z-10">
+                                                <h3 class="break-words font-bold text-lg text-indigo-900">
+                                                    {{$data->nama}}</h3>
                                             </div>
                                         </div>
                                         <div
@@ -607,13 +321,12 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                             </div>
                             {{-- content --}}
                             <div class="card-back max-w-sm min-h-[510px] p-6 bg-gradient-to-br from-[#1C2B58] via-[#2C3177] via-[#4C2B6F] to-[#80439A] text-white rounded-3xl shadow-lg cursor-pointer"
-                                onclick="flipCard({{ $data['id'] }})" id="detailedContent{{$data['id']}}"">
+                                onclick="flipCard({{ $data->id }})" id="detailedContent{{$data->id}}"">
                                 <div class=" flex items-center justify-between mb-4">
-                                <h2 class="text-lg font-semibold">{{$data['title']}}</h2>
-                                <img src="{{ asset('storage/assets/'. $data['icon']) }}" alt="ISP" srcset=""
-                                    class="w-16">
+                                <h2 class="text-lg font-semibold">{{$data->nama}}</h2>
+                                <img src="{{ asset('storage/'. $data->icon) }}" alt="ISP" srcset="" class="w-16">
                             </div>
-                            <h3 class="text-xl font-bold mb-2">{{$data['title']}}</h3>
+                            <h3 class="text-xl font-bold mb-2">{{$data->nama}}</h3>
                             <p class="text-sm leading-relaxed">
                                 Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk
                                 menyediakan solusi Teknologi Informasi yang objektif dan tidak memihak kepada

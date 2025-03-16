@@ -160,7 +160,7 @@
                     {{-- upload icon --}}
                     <div class="col-span-full flex flex-col justify-between">
                         {{-- show icon if on mode edit --}}
-                        <img id="iconImage" class="w-full object-cover rounded-lg mb-2" src="" alt="icon image">
+                        <img id="iconImage" class="w-48 object-cover mx-auto rounded-lg mb-2" src="" alt="icon image">
                         <label for="icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Icon
                             (Show in Landing Page)</label>
                         <input type="file" name="image_1" id="icon" accept="image/*"
