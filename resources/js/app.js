@@ -74,15 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 35,
             },
             1024: {
                 slidesPerView: 2.5,
-                spaceBetween: 10,
+                spaceBetween: 40,
             },
             1440:{
-                slidesPerView: 3,
-                spaceBetween: -25,
+                slidesPerView: 3.2,
+                spaceBetween: -30,
+            },
+            1920:{
+                slidesPerView: 4,
+                spaceBetween: -30,
             }
         },
     });

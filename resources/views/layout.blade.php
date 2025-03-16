@@ -104,7 +104,7 @@
     <footer class="bg-[#262262] text-white p-4 text-center py-5">
         <div class="container mx-auto px-6 py-2">
             <!-- Company information section -->
-            <div class="{{ request()->is('contact') ? 'block' : 'hidden' }}">
+            <div class="{{ request()->is('contact-us') ? 'block' : 'hidden' }}">
                 <div class="grid md:grid-cols-2 gap-8 ">
                     <!-- Left column with company info -->
                     <div class="text-start">

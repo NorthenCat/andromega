@@ -15,7 +15,7 @@
                 </div>
     </div>
     {{-- 1 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
@@ -68,7 +68,7 @@
         </div>
     </div>
     {{-- 2 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
@@ -121,7 +121,7 @@
         </div>
     </div>
     {{-- 3 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
@@ -182,7 +182,7 @@
         </div>
     </div>
     {{-- 4 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
@@ -235,7 +235,7 @@
         </div>
     </div>
     {{-- 5 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
@@ -288,7 +288,7 @@
         </div>
     </div>
     {{-- 6 --}}
-    <div class="lg:px-28 px-5 bg-[#000022] relative py-32">
+    <div class="lg:px-28 px-5 bg-[#000022] relative pt-32">
         <div data-aos="fade-up" class="container mx-auto px-4 pb-16">
             <div class="flex flex-col items-center justify-center text-center mb-16 text-white">
                 <!-- Number indicator -->
