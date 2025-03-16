@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             640: {
                 slidesPerView: 1.5,
-                spaceBetween: -30,
+                spaceBetween: 20,
             },
             768: {
                 slidesPerView: 2,
@@ -80,12 +80,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 2.5,
                 spaceBetween: 40,
             },
+            1280: {
+                slidesPerView: 2.5,
+                spaceBetween: -30,
+            },
             1300: {
-                slidesPerView: 3.2,
+                slidesPerView: 3,
                 spaceBetween: -30,
             },
             1440:{
                 slidesPerView: 3.2,
+                spaceBetween: -30,
+            },
+            1536: {
+                slidesPerView: 3.2,
+                spaceBetween: -30,
+            },
+            1600: {
+                slidesPerView: 3.5,
+                spaceBetween: -30,
+            },
+            1700: {
+                slidesPerView: 4,
                 spaceBetween: -30,
             },
             1920:{
