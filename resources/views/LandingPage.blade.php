@@ -1,64 +1,6 @@
 @extends('layout')
 @section('content')
 
-{{-- DUMMY DATA --}}
-@php
-$layananData = [
-[
-'id' => 1,
-'icon' => 'icon_layanan_isp.png',
-'title' => 'Layanan ISP',
-'description' => 'Sebagai penyedia layanan internet terkemuka (ISP), kami berkomitmen untuk menyediakan solusi Teknologi
-Informasi yang objektif dan tidak memihak kepada pelanggan kami. Kami menyadari bahwa keberhasilan bisnis pelanggan
-tergantung pada keandalan dan kinerja sistem TI mereka.'
-],
-[
-'id' => 2,
-'icon' => 'icon_infrastuktur_jaringan.png',
-'title' => 'Infrastruktur Modern untuk Bisnis Anda',
-'description' => 'Kami menawarkan layanan komprehensif untuk merancang, membangun, dan mengelola infrastruktur jaringan
-organisasi Anda dengan teliti, yang akan memberikan dampak positif pada setiap aspek bisnis Anda. Dengan pendekatan yang
-cermat dan berorientasi pada kebutuhan unik Anda, kami memastikan bahwa infrastruktur jaringan yang kami implementasikan
-tidak hanya andal dan efisien, tetapi juga didesain untuk mendukung pertumbuhan dan inovasi bisnis Anda secara
-berkelanjutan.'
-],
-[
-'id' => 3,
-'icon' => 'icon_pengembangan_perangkat_lunak.png',
-'title' => 'Pengembangan Perangkat Lunak',
-'description' => 'Layanan cloud kami memungkinkan Anda untuk menjalankan bisnis dengan lebih efisien dan fleksibel.
-Akses data dan aplikasi dari mana saja, kapan saja.'
-],
-[
-'id' => 4,
-'icon' => 'icon_video_penjelasan.png',
-'title' => 'Video Penjelasan',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
-[
-'id' => 5,
-'icon' => 'icon_design_grafis_uiux.png',
-'title' => 'Desain Grafis & UI/UX',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
-[
-'id' => 6,
-'icon' => 'icon_pengembangan_website.png',
-'title' => 'Pengembangan Website',
-'description' => 'Andromega memiliki komitmen yang kuat untuk menyediakan layanan pengembangan perangkat lunak khusus
-yang tidak hanya cepat dan efektif, tetapi juga sangat disesuaikan dengan kebutuhan unik setiap klien. Melalui
-pendekatan yang teliti dan kolaboratif, tim kami bekerja dengan Anda untuk merancang, mengimplementasikan, dan menguji
-solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melampaui harapan Anda.'
-],
-];
-@endphp
-
 {{-- HOME --}}
 <div class="lg:px-28 px-5 bg-cover bg-no-repeat bg-center min-h-screen"
     style="background-image: url('{{ asset('storage/assets/bg_putih_1-8.png') }}');">
@@ -75,10 +17,13 @@ solusi perangkat lunak yang tepat, yang tidak hanya memenuhi, tetapi juga melamp
                     yang bikin bisnis kamu lebih simpel,
                     cepat, dan efisien.
                 </h1>
+                <img src="{{ asset('storage/assets/logo_megalink_hitam.png') }}" alt="MegaLink" class="w-40">
+
                 <button type="button" class="">
                     <a href="#paket-hero"
                         class="w-full bg-[#f05426] text-white rounded-full text-lg font-normal pr-2 text-center flex items-center justify-center smooth-scroll"
                         onclick="event.preventDefault(); const element = document.querySelector('#paket-hero'); const elementRect = element.getBoundingClientRect(); const absoluteElementTop = elementRect.top + window.pageYOffset; const middle = absoluteElementTop - (window.innerHeight / 2) + 360; window.scrollTo({top: middle, behavior: 'smooth'});">
+
                         <div class="bg-gradient-radial from-[#80439a] to-[#2c3177] rounded-full py-3 px-5">
                             <p class="block w-full lg:p-1 text-sm lg:text-base">
                                 Yuk, Mulai Sekarang!
