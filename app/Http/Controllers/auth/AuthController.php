@@ -10,11 +10,17 @@ class AuthController extends Controller
 {
     public function index()
     {
+        //check if the user is already authenticated
+        if (auth()->check()) {
+            return redirect()->route('admin.dashboard')->with('info', 'You are already logged in
+            ');
+        }
         return view('auth.index');
     }
 
     public function login(Request $request)
     {
+
         $request->validate([
             'username' => 'required',
             'password' => 'required'

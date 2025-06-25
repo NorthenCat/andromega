@@ -37,7 +37,7 @@
     @vite('resources/js/app.js')
     @else
     <link rel="stylesheet" href="{{asset('build/assets/app-Cytcyt5Z.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/app-BHR4_z9_.css')}}">`
+    <link rel="stylesheet" href="{{asset('build/assets/app-BvmpCcTm.css')}}">`
     <script src="{{asset('build/assets/app-EmPSINkG.js')}}"></script>
     @endif
 

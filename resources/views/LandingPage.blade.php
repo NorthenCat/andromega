@@ -161,6 +161,38 @@
                         </div>
                         @endforeach
                     </div>
+
+                    {{-- Pilih button --}}
+                    <div class="flex justify-center mb-6 p-4">
+                        <a href="{{$setting->contact_sales}}"
+                            class="group relative text-white rounded-full text-lg font-medium text-center flex items-center justify-center w-full overflow-hidden transform hover:scale-105 transition-all duration-300 ease-out">
+
+                            {{-- Animated background --}}
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-[#f05426] via-[#f3714a] to-[#ff6b3d] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full">
+                            </div>
+
+                            {{-- Main button content --}}
+                            <div
+                                class="relative bg-gradient-to-r from-[#f05426] to-[#f3714a] rounded-full py-4 px-8 w-full shadow-lg group-hover:shadow-xl transition-all duration-300 border border-white/20">
+                                {{-- Shine effect --}}
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out">
+                                </div>
+
+                                <div class="relative flex items-center justify-center space-x-2">
+                                    <span class="font-semibold tracking-wide">
+                                        Pilih Paket
+                                    </span>
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 @endforeach
             </div>

@@ -21,14 +21,16 @@ class FrontEndController extends Controller
     {
         $paket = PaketInternet::orderBy('harga', 'asc')->take(3)->get();
         $layanan = Layanan::orderBy('nama', 'asc')->get();
+        $setting = SettingWeb::first();
 
-        return view('LandingPage', compact('paket', 'layanan'));
+        return view('LandingPage', compact('paket', 'layanan', 'setting'));
     }
 
     public function paket()
     {
         $paket = PaketInternet::orderBy('harga', 'asc')->get();
-        return view('PaketLayananPage', compact('paket'));
+        $setting = SettingWeb::first();
+        return view('PaketLayananPage', compact('paket', 'setting'));
     }
 
     public function service()
